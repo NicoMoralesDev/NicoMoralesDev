@@ -1,0 +1,38 @@
+.navContainer {
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    padding: 0.5rem;
+    height: 5rem;
+
+    border-bottom: 0.2rem solid #ff4d00;
+}
+
+.logotipo {
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+
+    & img {
+        margin-right: 0.5rem;
+    }
+}
+
+.navBar {
+    & .title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ff4d00;
+    }
+}
+
+.isotipo {
+    width: 3rem;
+    height: 3rem;
+}

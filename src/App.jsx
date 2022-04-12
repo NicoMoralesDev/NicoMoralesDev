@@ -1,45 +1,45 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.scss";
+import Button from "./components/ui/Button";
+import NavBar from "./components/nav/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    return (
+        <div className="App">
+            <NavBar />
+            <header className="home">
+                <h1>Nicolas Morales | Full-Stack Developer</h1>
+                <img
+                    src="https://i.pravatar.cc/150?img=Nick"
+                    alt="Photo of Nicolas"
+                />
+                <div className="whoiam">Intro: quien soy</div>
+                <Button text="Contact Me" />
+            </header>
+            <section>
+                <h2>Portfolio</h2>
+                <ul>
+                    <li>Niccrow Deals (WIP)</li>
+                    <li>Personal Blog (WIP)</li>
+                    <li>Nexa</li>
+                    <li>Quaglia-Lodigiani</li>
+                    <li>More: GitHub</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>LeetCode</li>
+                    <li></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Resources</h2>
+            </section>
+        </div>
+    );
 }
 
-export default App
+export default App;
