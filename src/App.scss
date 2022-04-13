@@ -5,6 +5,7 @@
 .home {
     background-color: black;
     min-height: 100vh;
+    padding: 0 20px;
     // margin-top: 5rem;
 
     display: flex;
@@ -17,11 +18,10 @@
     & img {
         border-radius: 100px;
     }
-}
 
-h1,
-h2 {
-    font-size: 20px;
+    h2 {
+        text-transform: uppercase;
+    }
 }
 
 /* .App-logo {

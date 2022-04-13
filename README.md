@@ -1,4 +1,44 @@
-### Hi there 👋
+# Nicolas Morales | Full-Stack Developer
+
+### Hi there 👋 Welcome to my GitHub!
+
+I'm Nico, an ethusiastic Full-Stack Developer
+
+##### Hobbies:
+
+-   Videogames
+-   Football
+-   3D Printing
+
+##### Portfolio:
+
+-   Nexa.com
+-   QuagliaLodigiani.com.ar
+
+##### Currently Working on:
+
+-   NiccrowDeals.com
+-   My own Blog
+
+##### Skills:
+
+-   Java
+-   Spring Boot
+-   HTML, CSS
+-   JavaScript
+-   React
+-   SQL / No-SQL
+-   Flutter
+
+##### Currently Learning:
+
+-   TypeScript
+-   GoLang
+-   React Native
+
+##### How to reach me:
+
+nicomorales.dev@gmail.com
 
 <!--
 **NicoMoralesDev/NicoMoralesDev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
