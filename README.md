@@ -2,7 +2,7 @@
 
 ### Hi there 👋 Welcome to my GitHub!
 
-I'm Nico, an ethusiastic Full-Stack Developer
+I'm Nico, an enthusiastic Full-Stack Developer
 
 ##### Hobbies:
 

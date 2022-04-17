@@ -2,25 +2,14 @@
     text-align: center;
 }
 
-.home {
-    background-color: black;
-    min-height: 100vh;
-    padding: 0 20px;
-    // margin-top: 5rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #ddd;
 
-    & img {
-        border-radius: 100px;
-    }
-
-    h2 {
-        text-transform: uppercase;
+    & header,
+    section {
+        margin-bottom: 5rem;
     }
 }
 

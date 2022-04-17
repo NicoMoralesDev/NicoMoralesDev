@@ -1,0 +1,12 @@
+.skillsContent {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* grid-template-columns: repeat(5, minmax(30rem, auto)); */
+    grid-gap: 2rem;
+
+    text-align: left;
+
+    & ul {
+        list-style: none;
+    }
+}

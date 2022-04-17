@@ -1,8 +1,15 @@
 .menuItem {
     padding: 0 3px;
     cursor: pointer;
+    margin-bottom: 1.2rem;
+    // font-weight: bold;
 
-    &:hover {
+    & a:hover {
         color: #cc3e00;
+    }
+
+    & a {
+        color: #ddd;
+        text-decoration: none;
     }
 }

@@ -1,8 +1,16 @@
-import { Children } from "react/cjs/react.production.min";
 import styles from "./menuItem.module.scss";
 
 const MenuItem = ({ children }) => {
-    return <li className={styles.menuItem}>{children}</li>;
+    return (
+        <li
+            onClick={(e) => {
+                e.preventDefault();
+            }}
+            className={styles.menuItem}
+        >
+            <a href={`/${children.toLowerCase()}`}>{children}</a>
+        </li>
+    );
 };
 
 export default MenuItem;
