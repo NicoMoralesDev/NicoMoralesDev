@@ -11,10 +11,86 @@ const NavBar = ({ isNavBarOpen, toggleNavBar }) => {
                         width="512px"
                         height="512px"
                         viewBox="0 0 512 512"
+                        version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <title>Menu Icon</title>
-                        <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                        <g id="Layer_1" />
+                        <g id="Layer_2">
+                            <g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="81.84"
+                                        y="81.84"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="217.66"
+                                        y="81.84"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="353.47"
+                                        y="81.84"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="81.84"
+                                        y="217.66"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="217.66"
+                                        y="217.66"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="353.47"
+                                        y="217.66"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="81.84"
+                                        y="353.47"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="217.66"
+                                        y="353.47"
+                                    />
+                                </g>
+                                <g>
+                                    <rect
+                                        height="76.69"
+                                        width="76.69"
+                                        x="353.47"
+                                        y="353.47"
+                                    />
+                                </g>
+                            </g>
+                        </g>
                     </svg>
                 </div>
 

@@ -2,6 +2,12 @@
     position: sticky;
     top: 0;
     background-color: black;
+    width: 100%;
+    min-height: 5vh;
+
+    @media only screen and (min-width: 1440px) {
+        width: 1440px;
+    }
 }
 
 .navBar {
@@ -9,15 +15,24 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    height: 6rem;
 
-    border-bottom: 0.2rem solid #ff4d00;
+    // border-bottom: 0.2rem solid #ff4d00;
+    box-shadow: 1px 1px 2px 0px #ff4d00;
+
+    @media only screen and (min-width: 768px) {
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
 
     & .menuIcon {
         display: flex;
         align-items: center;
         margin-right: 2rem;
         cursor: pointer;
+
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
 
         & svg {
             fill: #0062ff;

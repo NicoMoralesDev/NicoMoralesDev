@@ -39,6 +39,10 @@ $font-display: Geneva, Verdana, sans-serif;
 // $bp-mobile: 30em; // 480px;
 // $bp-mobile-min: 20em; // 320px;
 
+// @media only screen and (max-width: $bp-desktop-big) {
+//     height: 8rem;
+// }
+
 *,
 *::before,
 *::after {
@@ -57,17 +61,13 @@ html {
     // justify-content: center;
 }
 
-// @media only screen and (max-width: $bp-desktop-big) {
-//     height: 8rem;
-// }
-
 body {
     font-family: $font-primary, $font-display;
 
     background-color: $color-text-dark;
     color: $color-text;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 3.2rem;
     letter-spacing: 0;
 }
@@ -75,6 +75,7 @@ body {
 a,
 a:visited {
     color: $color-secondary;
+    text-decoration: none;
 
     &:hover {
         color: #008ecc;
@@ -86,7 +87,7 @@ h2 {
     color: $color-primary;
     font-size: 24px;
     font-weight: 900;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 h3,
