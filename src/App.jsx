@@ -20,23 +20,19 @@ function App() {
                 isNavBarOpen={navBarOpen}
                 toggleNavBar={handleToggleNavBar}
             />
-            <div className="container">
-                <div className="left"></div>
-                <div className="content">
-                    <header>
-                        <Home />
-                    </header>
-                    <section>
-                        <Portfolio />
-                    </section>
-                    <section>
-                        <Skills />
-                    </section>
-                    <section>
-                        <Resources />
-                    </section>
-                </div>
-                <div className="right"></div>
+            <div className="content">
+                <header>
+                    <Home />
+                </header>
+                <section>
+                    <Portfolio />
+                </section>
+                <section>
+                    <Skills />
+                </section>
+                <section>
+                    <Resources />
+                </section>
             </div>
         </div>
     );

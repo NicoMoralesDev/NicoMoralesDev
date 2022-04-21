@@ -1,3 +1,5 @@
+import styles from "./portfolio.modulce.scss";
+
 const Portfolio = () => {
     return (
         <>

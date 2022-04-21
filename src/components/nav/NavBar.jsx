@@ -4,8 +4,8 @@ import Switch from "../ui/Switch";
 
 const NavBar = ({ isNavBarOpen, toggleNavBar }) => {
     return (
-        <div className={styles.navContainer}>
-            <nav className={styles.navBar}>
+        <nav className={styles.navContainer}>
+            <div className={styles.navBar}>
                 <div onClick={toggleNavBar} className={styles.menuIcon}>
                     <svg
                         width="512px"
@@ -29,8 +29,8 @@ const NavBar = ({ isNavBarOpen, toggleNavBar }) => {
                 {isNavBarOpen ? <MenuList /> : null}
                 {/* <Switch name="theme" />
             <Switch name="lang" /> */}
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 };
 
