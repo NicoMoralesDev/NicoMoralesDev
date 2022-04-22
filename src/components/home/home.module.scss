@@ -16,16 +16,13 @@
         margin-bottom: 4rem;
     }
 
-    h2 {
-        text-transform: uppercase;
-    }
-
     p {
         margin-bottom: 4rem;
+        line-height: 4rem;
 
         @media only screen and (min-width: $tablet) {
             padding: 0 4rem;
-            margin-bottom: 0;
+            margin-bottom: 2rem;
         }
 
         @media only screen and (min-width: $desktop) {
@@ -33,8 +30,15 @@
         }
 
         & strong {
-            color: $primary-orange;
             font-weight: 700;
+        }
+    }
+}
+
+.dark {
+    p {
+        & strong {
+            color: $primary-orange;
         }
     }
 }

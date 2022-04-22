@@ -11,7 +11,7 @@ const menuList = ["Home", "Portfolio", "Skills", "Resources"];
 const MenuList = ({ toggleTheme }) => {
     const [isOptionsShowing, setIsOptionsSwhoing] = useState(false);
     const theme = useContext(ThemeContext);
-    const isLight = theme == "light" ? styles.light : "";
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
     const showOptions = (e) => {
         e.preventDefault();
@@ -35,14 +35,14 @@ const MenuList = ({ toggleTheme }) => {
     };
 
     return (
-        <menu className={`${styles.menu} ${isLight}`}>
+        <menu className={`${styles.menu} ${themeStyle}`}>
             {menuList.map((item) => {
                 return <MenuItem key={item}>{item}</MenuItem>;
             })}
             <li
                 onClick={toggleTheme}
                 className={`${stylesItem.menuItem} ${
-                    theme == "light" ? stylesItem.light : ""
+                    theme == "dark" ? stylesItem.dark : stylesItem.light
                 }`}
             >
                 {themeIcon(theme)}

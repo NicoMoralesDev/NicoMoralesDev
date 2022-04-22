@@ -4,12 +4,12 @@ import styles from "./skills.module.scss";
 
 const Skills = () => {
     const theme = useContext(ThemeContext);
-    const isLight = theme == "light" ? styles.light : "";
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
     return (
         <>
             <h2>Skills</h2>
-            <div className={`${styles.skillsContent} ${isLight}`}>
+            <div className={`${styles.skillsContent} ${themeStyle}`}>
                 <div>
                     <h3>Front-end</h3>
                     <ul>

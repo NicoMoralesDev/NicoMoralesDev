@@ -11,20 +11,20 @@ button {
     font-size: 2rem;
     font-weight: bold;
     color: $black;
+}
 
-    &.dark {
-        background-color: $primary-blue;
+.dark {
+    background-color: $primary-blue;
 
-        &:hover {
-            background-color: $secondary-blue;
-        }
+    &:hover {
+        background-color: $secondary-blue;
     }
+}
 
-    &.light {
-        background-color: $primary-orange;
+.light {
+    background-color: $primary-orange;
 
-        &:hover {
-            background-color: $secondary-orange;
-        }
+    &:hover {
+        background-color: $secondary-orange;
     }
 }

@@ -8,11 +8,11 @@ import { ThemeContext } from "../../Context";
 
 const NavBar = ({ toggleTheme, isNavBarOpen, toggleNavBar }) => {
     const theme = useContext(ThemeContext);
-    const isLight = theme == "light" ? styles.light : "";
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
     return (
-        <nav className={`${styles.navContainer} ${isLight}`}>
-            <div className={`${styles.navBar} ${isLight}`}>
+        <nav className={`${styles.navContainer} ${themeStyle}`}>
+            <div className={`${styles.navBar} ${themeStyle}`}>
                 <div onClick={toggleNavBar} className={styles.menuIcon}>
                     <SvgContainer>{menuIcon}</SvgContainer>
                 </div>

@@ -8,7 +8,6 @@
     left: 0;
     padding-top: 2rem;
 
-    background-color: $black;
     opacity: 0.9;
     height: 100vh;
     width: 100%;
@@ -52,6 +51,11 @@
     .selected {
         display: block;
     }
+}
+
+.dark {
+    background-color: $black;
+    color: $white;
 }
 
 .light {

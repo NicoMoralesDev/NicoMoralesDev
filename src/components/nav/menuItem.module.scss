@@ -18,8 +18,18 @@
     }
 
     & a {
-        color: #ddd;
         text-decoration: none;
+    }
+
+    svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.dark {
+    & a {
+        color: #ddd;
 
         &:hover {
             color: $secondary-orange;
@@ -28,8 +38,6 @@
 
     svg {
         fill: #ddd;
-        width: 2.5rem;
-        height: 2.5rem;
 
         &:hover {
             fill: $secondary-orange;

@@ -6,10 +6,10 @@ import { ThemeContext } from "../../Context";
 
 const Home = () => {
     const theme = useContext(ThemeContext);
-    const isLight = theme == "light" ? styles.light : "";
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
     return (
-        <div className={`${styles.home} ${isLight}`}>
+        <div className={`${styles.home} ${themeStyle}`}>
             <h1>
                 Nicolas Morales
                 <br />

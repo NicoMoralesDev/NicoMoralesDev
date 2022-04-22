@@ -35,7 +35,7 @@ function App() {
     const [theme, setTheme] = useState("dark");
 
     const isPageWide = useMediaQuery("(min-width: 800px)");
-    const isLight = theme == "light" ? styles.light : "";
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
     const handleToggleNavBar = (e) => {
         setNavBarOpen(!navBarOpen);
@@ -52,7 +52,7 @@ function App() {
 
     return (
         <ThemeContext.Provider value={theme}>
-            <div className={`${styles.App} ${isLight}`}>
+            <div className={`${styles.App} ${themeStyle}`}>
                 <NavBar
                     toggleTheme={handleToggleTheme}
                     isNavBarOpen={isPageWide ? true : navBarOpen}

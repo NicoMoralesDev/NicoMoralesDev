@@ -15,8 +15,25 @@
     section {
         margin-bottom: 5rem;
         padding: 2rem;
+    }
+}
 
-        box-shadow: 1px 1px 4px 0px $primary-orange;
+.dark {
+    background-color: $black;
+    color: $white;
+
+    // & header,
+    // section {
+    //     box-shadow: 1px 1px 4px 0px $primary-orange;
+    // }
+
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $primary-orange;
     }
 }
 
@@ -24,10 +41,10 @@
     background-color: $white;
     color: $black;
 
-    & header,
-    section {
-        box-shadow: 1px 1px 4px 0px $primary-blue;
-    }
+    // & header,
+    // section {
+    //     box-shadow: 1px 1px 4px 0px $primary-blue;
+    // }
 
     & h1,
     h2,
