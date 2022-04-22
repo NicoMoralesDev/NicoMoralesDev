@@ -1,14 +1,4 @@
-// COLOR VARIABLES
-$color-back: black;
-$color-text: #dddddd;
-
-$color-primary: #ff4d00;
-$color-secondary: #0062ff;
-$color-text-dark: #000000;
-
-// FONT VARIABLES
-$font-primary: "Fashion Fetish";
-$font-display: Geneva, Verdana, sans-serif;
+@import "styles/variables.scss";
 
 @font-face {
     font-family: $font-primary;
@@ -30,18 +20,6 @@ $font-display: Geneva, Verdana, sans-serif;
     font-weight: 900;
     font-display: swap;
 }
-// RESPONSIVE BREAKPOINTS
-// $bp-desktop-max: 100em; // 1600px
-// $bp-desktop-big: 90em; // 1440px
-// $bp-desktop-wide: 75em; // 1200px
-// $bp-desktop-small: 62em; // 992px
-// $bp-tablet: 48em; // 768px;
-// $bp-mobile: 30em; // 480px;
-// $bp-mobile-min: 20em; // 320px;
-
-// @media only screen and (max-width: $bp-desktop-big) {
-//     height: 8rem;
-// }
 
 *,
 *::before,
@@ -64,8 +42,8 @@ html {
 body {
     font-family: $font-primary, $font-display;
 
-    background-color: $color-text-dark;
-    color: $color-text;
+    background-color: $black;
+    color: $white;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 3.2rem;
@@ -74,17 +52,17 @@ body {
 
 a,
 a:visited {
-    color: $color-secondary;
+    color: $primary-blue;
     text-decoration: none;
 
     &:hover {
-        color: #008ecc;
+        color: $secondary-blue;
     }
 }
 
 h1,
 h2 {
-    color: $color-primary;
+    color: $primary-orange;
     font-size: 24px;
     font-weight: 900;
     margin-bottom: 4rem;
@@ -94,7 +72,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $color-primary;
+    color: $primary-orange;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 1rem;

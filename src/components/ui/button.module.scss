@@ -1,17 +1,30 @@
+@import "../../styles/variables.scss";
+
 button {
-    width: 100px;
-    height: 30px;
+    width: 15rem;
+    height: 5rem;
     cursor: pointer;
 
-    background-color: #0062ff;
-    border: 0 solid black;
-    border-radius: 5px;
+    border: 0 solid $black;
+    border-radius: 10rem;
 
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: bold;
-    color: black;
+    color: $black;
 
-    &:hover {
-        background-color: #008ecc;
+    &.dark {
+        background-color: $primary-blue;
+
+        &:hover {
+            background-color: $secondary-blue;
+        }
+    }
+
+    &.light {
+        background-color: $primary-orange;
+
+        &:hover {
+            background-color: $secondary-orange;
+        }
     }
 }

@@ -1,20 +1,28 @@
+@import "../../styles/variables.scss";
+
 .skillsContent {
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-gap: 2rem;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $tablet) {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: $desktop) {
         grid-template-columns: repeat(5, 1fr);
     }
 
     div {
-        box-shadow: -1px -1px 2px 0px #ff4d00;
+        box-shadow: -1px -1px 2px 0px $primary-orange;
         height: 100%;
         min-height: 10rem;
         padding: 1rem;
+    }
+}
+
+.light {
+    div {
+        box-shadow: -1px -1px 2px 0px $primary-blue;
     }
 }

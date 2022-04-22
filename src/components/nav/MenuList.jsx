@@ -1,104 +1,77 @@
 import MenuItem from "./MenuItem";
 import styles from "./menuList.module.scss";
 import stylesItem from "./menuItem.module.scss";
+import SvgContainer from "../ui/SvgContainer";
+import { moonIcon, sunIcon, enFlagIcon, esFlagIcon } from "../../svgElements";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../Context";
 
 const menuList = ["Home", "Portfolio", "Skills", "Resources"];
 
-const MenuList = () => {
-    const theme = (theme) => {
-        if (theme == "dark") {
+const MenuList = ({ toggleTheme }) => {
+    const [isOptionsShowing, setIsOptionsSwhoing] = useState(false);
+    const theme = useContext(ThemeContext);
+    const isLight = theme == "light" ? styles.light : "";
+
+    const showOptions = (e) => {
+        e.preventDefault();
+        setIsOptionsSwhoing(!isOptionsShowing);
+    };
+
+    const themeIcon = (theme) => {
+        if (theme == "light") {
             return (
                 <a href="">
-                    <svg
-                        width="512px"
-                        height="512px"
-                        viewBox="0 0 512 512"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <g id="Layer_1" />
-                        <g id="Layer_2">
-                            <g>
-                                <g>
-                                    <g>
-                                        <circle cx="256" cy="256" r="126.66" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M256,97.92c-8.22,0-14.88-6.66-14.88-14.88V58.38c0-8.22,6.66-14.88,14.88-14.88s14.88,6.66,14.88,14.88      v24.66C270.88,91.26,264.22,97.92,256,97.92z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M378.3,148.58c-3.81,0-7.62-1.45-10.52-4.36c-5.81-5.81-5.81-15.23,0-21.04l17.44-17.44      c5.81-5.81,15.23-5.81,21.04,0c5.81,5.81,5.81,15.23,0,21.04l-17.44,17.44C385.91,147.13,382.11,148.58,378.3,148.58z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M453.62,270.88h-24.66c-8.22,0-14.88-6.66-14.88-14.88s6.66-14.88,14.88-14.88h24.66      c8.22,0,14.88,6.66,14.88,14.88S461.84,270.88,453.62,270.88z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M395.74,410.62c-3.81,0-7.62-1.45-10.52-4.36l-17.44-17.44c-5.81-5.81-5.81-15.23,0-21.04      c5.81-5.81,15.23-5.81,21.04,0l17.44,17.44c5.81,5.81,5.81,15.23,0,21.04C403.35,409.17,399.55,410.62,395.74,410.62z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M256,468.5c-8.22,0-14.88-6.66-14.88-14.88v-24.66c0-8.22,6.66-14.88,14.88-14.88s14.88,6.66,14.88,14.88      v24.66C270.88,461.84,264.22,468.5,256,468.5z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M116.26,410.62c-3.81,0-7.62-1.45-10.52-4.36c-5.81-5.81-5.81-15.23,0-21.04l17.44-17.44      c5.81-5.81,15.23-5.81,21.04,0c5.81,5.81,5.81,15.23,0,21.04l-17.44,17.44C123.88,409.17,120.07,410.62,116.26,410.62z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M83.04,270.88H58.38c-8.22,0-14.88-6.66-14.88-14.88s6.66-14.88,14.88-14.88h24.66      c8.22,0,14.88,6.66,14.88,14.88S91.26,270.88,83.04,270.88z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path d="M133.7,148.58c-3.81,0-7.62-1.45-10.52-4.36l-17.44-17.44c-5.81-5.81-5.81-15.23,0-21.04      c5.81-5.81,15.23-5.81,21.04,0l17.44,17.44c5.81,5.81,5.81,15.23,0,21.04C141.32,147.13,137.51,148.58,133.7,148.58z" />
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+                    <SvgContainer>{sunIcon}</SvgContainer>
                 </a>
             );
-        } else if ("light") {
+        } else if (theme == "dark") {
             return (
                 <a href="">
-                    <svg
-                        width="512px"
-                        height="512px"
-                        viewBox="0 0 512 512"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <g id="Layer_1" />
-                        <g id="Layer_2">
-                            <g>
-                                <path d="M440.14,302.07c-20.52,81-93.9,140.93-181.28,140.93c-103.28,0-187-83.72-187-187s83.72-187,187-187    c2.77,0,5.54,0.06,8.28,0.18c-32.11,26.65-52.55,66.85-52.55,111.83c0,80.22,65.03,145.25,145.25,145.25    C389.52,326.27,417.14,317.36,440.14,302.07z" />
-                            </g>
-                        </g>
-                    </svg>
+                    <SvgContainer>{moonIcon}</SvgContainer>
                 </a>
             );
         }
     };
 
     return (
-        <menu className={styles.menu}>
+        <menu className={`${styles.menu} ${isLight}`}>
             {menuList.map((item) => {
                 return <MenuItem key={item}>{item}</MenuItem>;
             })}
-            <li className={stylesItem.menuItem}>{theme("dark")}</li>
+            <li
+                onClick={toggleTheme}
+                className={`${stylesItem.menuItem} ${
+                    theme == "light" ? stylesItem.light : ""
+                }`}
+            >
+                {themeIcon(theme)}
+            </li>
             <li className={stylesItem.menuItem}>
-                <a href="">En</a>
+                <ul
+                    className={`
+                        ${styles.selector} ${isOptionsShowing && styles.opened}
+                        
+                    `}
+                >
+                    <a href="">
+                        <li
+                            key={"en"}
+                            onClick={showOptions}
+                            className={`${styles.selected}`}
+                        >
+                            <SvgContainer>{enFlagIcon}</SvgContainer>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li
+                            key={"es"}
+                            className={!isOptionsShowing ? styles.hidden : null}
+                        >
+                            <SvgContainer>{esFlagIcon}</SvgContainer>
+                        </li>
+                    </a>
+                </ul>
             </li>
         </menu>
     );

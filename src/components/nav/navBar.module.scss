@@ -1,12 +1,14 @@
+@import "../../styles/variables.scss";
+
 .navContainer {
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: $black;
     width: 100%;
     min-height: 5vh;
 
-    @media only screen and (min-width: 1440px) {
-        width: 1440px;
+    @media only screen and (min-width: $desktop) {
+        max-width: 1440px;
     }
 }
 
@@ -17,9 +19,9 @@
     padding: 1rem;
 
     // border-bottom: 0.2rem solid #ff4d00;
-    box-shadow: 1px 1px 2px 0px #ff4d00;
+    box-shadow: 1px 1px 2px 0px $primary-orange;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $tablet) {
         justify-content: space-between;
         padding: 1rem 2rem;
     }
@@ -30,12 +32,12 @@
         margin-right: 2rem;
         cursor: pointer;
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $tablet) {
             display: none;
         }
 
         & svg {
-            fill: #0062ff;
+            fill: $primary-blue;
             width: 4rem;
             height: 4rem;
         }
@@ -44,6 +46,7 @@
     .logotipo {
         display: flex;
         align-items: center;
+        // cursor: pointer;
 
         .isotipo {
             width: 3rem;
@@ -53,11 +56,22 @@
         & .title {
             font-size: 2rem;
             font-weight: 900;
-            color: #ff4d00;
+            color: $primary-orange;
         }
 
         & img {
             margin-right: 0.5rem;
         }
+    }
+}
+
+.light {
+    background-color: $white;
+    color: $black;
+
+    box-shadow: 1px 1px 2px 0px $primary-blue;
+
+    .logotipo .title {
+        color: $black;
     }
 }

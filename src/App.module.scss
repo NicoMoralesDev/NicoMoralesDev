@@ -1,0 +1,40 @@
+@import "styles/variables.scss";
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    margin: 2rem 2rem;
+    max-width: 1440px;
+
+    & header,
+    section {
+        margin-bottom: 5rem;
+        padding: 2rem;
+
+        box-shadow: 1px 1px 4px 0px $primary-orange;
+    }
+}
+
+.light {
+    background-color: $white;
+    color: $black;
+
+    & header,
+    section {
+        box-shadow: 1px 1px 4px 0px $primary-blue;
+    }
+
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $primary-blue;
+    }
+}

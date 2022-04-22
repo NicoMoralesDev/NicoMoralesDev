@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../Context";
 import styles from "./skills.module.scss";
 
 const Skills = () => {
+    const theme = useContext(ThemeContext);
+    const isLight = theme == "light" ? styles.light : "";
+
     return (
         <>
             <h2>Skills</h2>
-            <div className={styles.skillsContent}>
+            <div className={`${styles.skillsContent} ${isLight}`}>
                 <div>
                     <h3>Front-end</h3>
                     <ul>

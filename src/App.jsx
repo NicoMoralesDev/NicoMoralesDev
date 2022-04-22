@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
-import "./App.scss";
+import styles from "./App.module.scss";
 import NavBar from "./components/nav/NavBar";
 import Home from "./components/home/Home";
 import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
 import Resources from "./components/resources/Resources";
+import { ThemeContext } from "./Context";
 
 export function useMediaQuery(query) {
     const [matches, setMatches] = useState(false);
@@ -33,34 +34,46 @@ function App() {
     const [navBarOpen, setNavBarOpen] = useState(false);
     const [theme, setTheme] = useState("dark");
 
-    let isPageWide = useMediaQuery("(min-width: 800px)");
+    const isPageWide = useMediaQuery("(min-width: 800px)");
+    const isLight = theme == "light" ? styles.light : "";
 
     const handleToggleNavBar = (e) => {
         setNavBarOpen(!navBarOpen);
     };
 
+    const handleToggleTheme = (e) => {
+        e.preventDefault();
+        if (theme == "dark") {
+            setTheme("light");
+        } else {
+            setTheme("dark");
+        }
+    };
+
     return (
-        <div className="App">
-            <NavBar
-                theme={theme}
-                isNavBarOpen={isPageWide ? true : navBarOpen}
-                toggleNavBar={handleToggleNavBar}
-            />
-            <div className="content">
-                <header>
-                    <Home />
-                </header>
-                <section>
-                    <Portfolio />
-                </section>
-                <section>
-                    <Skills />
-                </section>
-                <section>
-                    <Resources />
-                </section>
+        <ThemeContext.Provider value={theme}>
+            <div className={`${styles.App} ${isLight}`}>
+                <NavBar
+                    toggleTheme={handleToggleTheme}
+                    isNavBarOpen={isPageWide ? true : navBarOpen}
+                    toggleNavBar={handleToggleNavBar}
+                />
+                <div className={styles.content}>
+                    <header>
+                        <Home />
+                    </header>
+                    <section>
+                        <Portfolio />
+                    </section>
+                    <section>
+                        <Skills />
+                    </section>
+                    <section>
+                        <Resources />
+                    </section>
+                </div>
             </div>
-        </div>
+        </ThemeContext.Provider>
     );
 }
 

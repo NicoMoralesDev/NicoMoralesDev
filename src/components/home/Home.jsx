@@ -1,16 +1,21 @@
 import styles from "./home.module.scss";
 import Button from "../ui/Button";
+import photo from "../../images/yo_perfil.jpg";
+import { useContext } from "react";
+import { ThemeContext } from "../../Context";
 
 const Home = () => {
+    const theme = useContext(ThemeContext);
+    const isLight = theme == "light" ? styles.light : "";
+
     return (
-        <div className={styles.home}>
+        <div className={`${styles.home} ${isLight}`}>
             <h1>
                 Nicolas Morales
                 <br />
                 Full-Stack Developer
             </h1>
-            <img src="src/images/yo_perfil.jpg" alt="Photo of Nicolas" />
-            {/* <h3>Hi, I'm Nico!</h3> */}
+            <img src={photo} alt="Photo of Nicolas" />
             <h2>About Me</h2>
             <p className="whoiam">
                 Hi, I'm <strong>Nico</strong>, Lorem ipsum dolor sit amet,

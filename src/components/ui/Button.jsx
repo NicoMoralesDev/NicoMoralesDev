@@ -1,7 +1,12 @@
-import "./button.module.scss";
+import { useContext } from "react";
+import { ThemeContext } from "../../Context";
+import styles from "./button.module.scss";
 
 const Button = ({ text }) => {
-    return <button>{text}</button>;
+    const theme = useContext(ThemeContext);
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
+
+    return <button className={themeStyle}>{text}</button>;
 };
 
 export default Button;

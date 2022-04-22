@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../Context";
 import styles from "./portfolio.module.scss";
 
 const Portfolio = () => {
+    const theme = useContext(ThemeContext);
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
+
     return (
         <>
             <h2>Portfolio</h2>
-            <div className={styles.portfolioContent}>
+            <div className={`${styles.portfolioContent} ${themeStyle}`}>
                 <ul>
                     <li>
                         This Web! You can check the code{" "}
