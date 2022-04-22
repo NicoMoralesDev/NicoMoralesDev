@@ -6,7 +6,6 @@ specifiers:
   jest: ^27.5.1
   postcss: ^8.4.12
   postcss-cli: ^9.1.0
-  postcss-modules-values: ^4.0.0
   react: ^17.0.2
   react-dom: ^17.0.2
   sass: ^1.50.0
@@ -16,7 +15,6 @@ dependencies:
   autoprefixer: 10.4.4_postcss@8.4.12
   postcss: 8.4.12
   postcss-cli: 9.1.0_postcss@8.4.12
-  postcss-modules-values: 4.0.0_postcss@8.4.12
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
@@ -1708,15 +1706,6 @@ packages:
       safer-buffer: 2.1.2
     dev: true
 
-  /icss-utils/5.1.0_postcss@8.4.12:
-    resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==}
-    engines: {node: ^10 || ^12 || >= 14}
-    peerDependencies:
-      postcss: ^8.1.0
-    dependencies:
-      postcss: 8.4.12
-    dev: false
-
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
@@ -2688,16 +2677,6 @@ packages:
       lilconfig: 2.0.5
       postcss: 8.4.12
       yaml: 1.10.2
-    dev: false
-
-  /postcss-modules-values/4.0.0_postcss@8.4.12:
-    resolution: {integrity: sha512-RDxHkAiEGI78gS2ofyvCsu7iycRv7oqw5xMWn9iMoR0N/7mf9D50ecQqUo5BZ9Zh2vH4bCUR/ktCqbB9m8vJjQ==}
-    engines: {node: ^10 || ^12 || >= 14}
-    peerDependencies:
-      postcss: ^8.1.0
-    dependencies:
-      icss-utils: 5.1.0_postcss@8.4.12
-      postcss: 8.4.12
     dev: false
 
   /postcss-reporter/7.0.5_postcss@8.4.12:
