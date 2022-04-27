@@ -35,6 +35,14 @@
     h6 {
         color: $primary-orange;
     }
+
+    & a {
+        color: $primary-blue;
+
+        &:hover {
+            color: $secondary-blue;
+        }
+    }
 }
 
 .light {
@@ -53,5 +61,13 @@
     h5,
     h6 {
         color: $primary-blue;
+    }
+
+    & a {
+        color: $primary-orange;
+
+        &:hover {
+            color: $secondary-orange;
+        }
     }
 }

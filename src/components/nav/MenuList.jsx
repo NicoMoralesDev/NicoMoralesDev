@@ -22,13 +22,13 @@ const MenuList = ({ toggleTheme }) => {
         if (theme == "light") {
             return (
                 <a href="">
-                    <SvgContainer>{sunIcon}</SvgContainer>
+                    <SvgContainer>{moonIcon}</SvgContainer>
                 </a>
             );
         } else if (theme == "dark") {
             return (
                 <a href="">
-                    <SvgContainer>{moonIcon}</SvgContainer>
+                    <SvgContainer>{sunIcon}</SvgContainer>
                 </a>
             );
         }
