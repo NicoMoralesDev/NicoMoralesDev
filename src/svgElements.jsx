@@ -428,7 +428,7 @@ export const langIcon = (
         width="200px"
         height="200px"
         viewBox="796 796 200 200"
-        enable-background="new 796 796 200 200"
+        enableBackground="new 796 796 200 200"
     >
         <g>
             <path
