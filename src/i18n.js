@@ -21,7 +21,13 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         fallbackLng: "en",
+        /*
+        'es-ES': ['es'],
+        'es-AR': ['es'],
+        'default': ['en']
+        */
         debug: false,
+        load: "languageOnly",
 
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
