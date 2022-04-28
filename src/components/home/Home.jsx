@@ -3,31 +3,28 @@ import Button from "../ui/Button";
 import photo from "../../images/yo_perfil.webp";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
+    const { t } = useTranslation();
 
     return (
         <div className={`${styles.home} ${themeStyle}`}>
             <h1>
                 Nicolas Morales
                 <br />
-                Full-Stack Developer
+                {t("home.developer")}
             </h1>
             <img src={photo} alt="Photo of Nicolas" />
-            <h2>About Me</h2>
+            <h2>{t("home.aboutMe")}</h2>
             <p className="whoiam">
-                Hi, I'm <strong>Nico</strong>, Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                {t("home.text1")}
+                <strong>Nico</strong>
+                {t("home.text2")}
             </p>
-            <Button text="Contact Me" />
+            <Button text={t("home.button")} />
         </div>
     );
 };

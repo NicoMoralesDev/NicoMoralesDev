@@ -1,0 +1,52 @@
+{
+    "nav": {
+        "skills": "Habilidades",
+        "portfolio": "Portafolio",
+        "resources": "Recursos",
+        "home": "Inicio"
+    },
+    "home": {
+        "developer": "Desarrollador Full Stack",
+        "aboutMe": "Sobre Mi",
+        "text1": "Hola, Soy ",
+        "text2": ", Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "button": "Contáctame"
+    },
+    "portfolio": {
+        "heading": "Portafolio",
+        "item1-title": "Este sitio! Revisa el código debajo...",
+        "item1-desc": "Hecho con React, Vite, SASS.",
+        "item2-title": "Blog Personal (En progreso)",
+        "item2-desc": "",
+        "item3-title": "Niccrow Deals (En progreso)",
+        "item3-desc": "",
+        "item4-title": "Nexa - Penetration Testing Professional Services",
+        "item4-desc": "",
+        "item5-title": "Estudio Quaglia-Lodigiani",
+        "item5-desc": "",
+        "item6-title": "Más: Mi Perfil de GitHub",
+        "item6-desc": "",
+        "item7-title": "Más: Mi Perfil de LeetCode",
+        "item7-desc": ""
+    },
+    "skills": {
+        "heading": "Habilidades",
+        "front-end": "Front End",
+        "back-end": "Back End",
+        "mobile": "Mobile",
+        "databases": "Bases de Datos",
+        "others": "Otros",
+        "learning": "Aprendiendo",
+        "agile": "Metodologías Ágiles",
+        "continuous-integration": "Integración Continua"
+    },
+    "resources": {
+        "heading": "Recursos",
+        "development": "Desarrollo",
+        "design": "Diseño",
+        "html-css": "HTML y CSS",
+        "assets": "Assets",
+        "deployment": "Optmización y Despliegue",
+        "more": "Más"
+    }
+}

@@ -11,13 +11,16 @@ import RotatingCard from "../ui/RotatingCard/RotatingCard";
 import CardFront from "../ui/RotatingCard/CardFront";
 import CardBack from "../ui/RotatingCard/CardBack";
 
+import { useTranslation } from "react-i18next";
+
 const Portfolio = () => {
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
+    const { t } = useTranslation();
 
     return (
         <>
-            <h2>Portfolio</h2>
+            <h2>{t("portfolio.heading")}</h2>
             <div className={`${styles.portfolioContent} ${themeStyle}`}>
                 <ul>
                     <li>

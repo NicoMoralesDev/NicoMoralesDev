@@ -1,0 +1,52 @@
+{
+    "nav": {
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "resources": "Resources",
+        "home": "Home"
+    },
+    "home": {
+        "developer": "Full-Stack Developer",
+        "aboutMe": "About Me",
+        "text1": "Hi, I'm ",
+        "text2": ", Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "button": "Contact Me"
+    },
+    "portfolio": {
+        "heading": "Portfolio",
+        "item1-title": "This Web! Check the code below...",
+        "item1-desc": "Made with React, Vite, SASS.",
+        "item2-title": "Personal Blog (WIP)",
+        "item2-desc": "",
+        "item3-title": "Niccrow Deals (WIP)",
+        "item3-desc": "",
+        "item4-title": "Nexa - Penetration Testing Professional Services",
+        "item4-desc": "",
+        "item5-title": "Estudio Quaglia-Lodigiani",
+        "item5-desc": "",
+        "item6-title": "More: My GitHub Profile",
+        "item6-desc": "",
+        "item7-title": "More: My LeetCode Profile",
+        "item7-desc": ""
+    },
+    "skills": {
+        "heading": "Skills",
+        "front-end": "Front-end",
+        "back-end": "Back-end",
+        "mobile": "Mobile",
+        "databases": "Databases",
+        "others": "Others",
+        "learning": "Learning",
+        "agile": "Agile Methodologies",
+        "continuous-integration": "Continuous Integration"
+    },
+    "resources": {
+        "heading": "Resources",
+        "development": "Development",
+        "design": "Design",
+        "html-css": "HTML and CSS",
+        "assets": "Assets",
+        "deployment": "Optmization and Deployment",
+        "more": "More"
+    }
+}

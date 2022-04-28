@@ -37,11 +37,16 @@
     }
 
     .opened {
+        align-self: flex-start;
         gap: 1rem;
 
         @media only screen and (min-width: $tablet) {
-            top: 1.8rem;
+            top: 0.3rem;
         }
+    }
+
+    .flagItem {
+        margin-top: 0.2rem;
     }
 
     .hidden {
@@ -56,9 +61,21 @@
 .dark {
     background-color: $black;
     color: $white;
+
+    .selectorItem {
+        & svg {
+            fill: $white;
+        }
+    }
 }
 
 .light {
     background-color: $white;
     color: $black;
+
+    .selectorItem {
+        & svg {
+            fill: $black;
+        }
+    }
 }

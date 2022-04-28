@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 
 import styles from "./App.module.scss";
 import NavBar from "./components/nav/NavBar";
@@ -51,29 +51,31 @@ function App() {
     };
 
     return (
-        <ThemeContext.Provider value={theme}>
-            <div className={`${styles.App} ${themeStyle}`}>
-                <NavBar
-                    toggleTheme={handleToggleTheme}
-                    isNavBarOpen={isPageWide ? true : navBarOpen}
-                    toggleNavBar={handleToggleNavBar}
-                />
-                <div className={styles.content}>
-                    <header>
-                        <Home />
-                    </header>
-                    <section>
-                        <Portfolio />
-                    </section>
-                    <section>
-                        <Skills />
-                    </section>
-                    <section>
-                        <Resources />
-                    </section>
+        <Suspense fallback="loading">
+            <ThemeContext.Provider value={theme}>
+                <div className={`${styles.App} ${themeStyle}`}>
+                    <NavBar
+                        toggleTheme={handleToggleTheme}
+                        isNavBarOpen={isPageWide ? true : navBarOpen}
+                        toggleNavBar={handleToggleNavBar}
+                    />
+                    <div className={styles.content}>
+                        <header>
+                            <Home />
+                        </header>
+                        <section>
+                            <Portfolio />
+                        </section>
+                        <section>
+                            <Skills />
+                        </section>
+                        <section>
+                            <Resources />
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </ThemeContext.Provider>
+            </ThemeContext.Provider>
+        </Suspense>
     );
 }
 
