@@ -1,6 +1,6 @@
 import styles from "./navBar.module.scss";
 import MenuList from "./MenuList";
-import icon from "../../images/nicrow-icono-flat-300px.png";
+import icon from "../../images/nicrow-icono-flat-300px.webp";
 import { menuIcon } from "../../svgElements";
 import SvgContainer from "../ui/SvgContainer";
 import { useContext } from "react";

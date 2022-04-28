@@ -1,6 +1,6 @@
 import styles from "./home.module.scss";
 import Button from "../ui/Button";
-import photo from "../../images/yo_perfil.jpg";
+import photo from "../../images/yo_perfil.webp";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
 

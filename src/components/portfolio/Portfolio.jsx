@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
 import styles from "./portfolio.module.scss";
-import icon from "../../images/nicrow-icono-flat-300px.png";
+import icon from "../../images/nicrow-icono-flat-300px.webp";
 
-import nexaWebImage from "../../images/nexa-web-ss.png";
-import quagliaWebImage from "../../images/qua&l-web-ss.png";
+import nexaWebImage from "../../images/nexa-web-ss.webp";
+import quagliaWebImage from "../../images/qua&l-web-ss.webp";
 
 import CardHeader from "../ui/RotatingCard/CardHeader";
 import RotatingCard from "../ui/RotatingCard/RotatingCard";

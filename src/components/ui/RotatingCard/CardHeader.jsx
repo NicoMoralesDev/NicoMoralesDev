@@ -1,3 +1,5 @@
+import styles from "./cardHeader.module.scss";
+
 const CardHeader = ({ title, url, github }) => {
     const gitHubLink =
         github != null ? (
@@ -9,8 +11,8 @@ const CardHeader = ({ title, url, github }) => {
         );
 
     return (
-        <div>
-            <h4>{title}</h4>
+        <div className={styles.cardHeader}>
+            <h4 className={styles.title}>{title}</h4>
             <a href={url} target="_blank">
                 Visit Web
             </a>
