@@ -1,63 +1,65 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
 import styles from "./skills.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
+    const { t } = useTranslation();
 
     return (
         <>
-            <h2>Skills</h2>
+            <h2>{t("skills.heading")}</h2>
             <div className={`${styles.skillsContent} ${themeStyle}`}>
                 <div>
-                    <h3>Front-end</h3>
+                    <h3>{t("skills.front-end")}</h3>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>SASS</li>
                         <li>JavaScript</li>
-                        <li>Learning TypeScript</li>
+                        <li>{t("skills.learning")} TypeScript</li>
                         <li>React</li>
                         <li>Next.js</li>
                         <li>Tailwind</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Back-end</h3>
+                    <h3>{t("skills.back-end")}</h3>
                     <ul>
                         <li>Java</li>
                         <li>Spring Boot</li>
-                        <li>Learning GoLang</li>
+                        <li>{t("skills.learning")} GoLang</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Mobile</h3>
+                    <h3>{t("skills.mobile")}</h3>
                     <ul>
-                        <li>Learning Flutter</li>
-                        <li>Learning React Native</li>
+                        <li>{t("skills.learning")} Flutter</li>
+                        <li>{t("skills.learning")} React Native</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Databases</h3>
+                    <h3>{t("skills.databases")}</h3>
                     <ul>
                         <li>MySQL</li>
                         <li>PostgreSQL</li>
                         <li>MongoDB</li>
                         <li>ElasticSearch</li>
-                        <li>Learning GraphQL</li>
-                        <li>Learning DynamoDB</li>
-                        <li>Learning Redis</li>
+                        <li>{t("skills.learning")} GraphQL</li>
+                        <li>{t("skills.learning")} DynamoDB</li>
+                        <li>{t("skills.learning")} Redis</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Others</h3>
+                    <h3>{t("skills.others")}</h3>
                     <ul>
                         <li>Git</li>
-                        <li>Agile Methodologies</li>
-                        <li>Continuous Integration</li>
-                        <li>Learning Docker</li>
-                        <li>Learning AWS</li>
+                        <li>{t("skills.agile")}</li>
+                        <li>{t("skills.continuous-integration")}</li>
+                        <li>{t("skills.learning")} Docker</li>
+                        <li>{t("skills.learning")} AWS</li>
                     </ul>
                 </div>
             </div>

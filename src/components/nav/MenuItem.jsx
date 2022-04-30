@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { useContext, forwardRef } from "react";
 import { ThemeContext } from "../../Context";
 import styles from "./menuItem.module.scss";
 
-const MenuItem = ({ children }) => {
+const MenuItem = ({ children, menuId }) => {
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
@@ -10,10 +10,11 @@ const MenuItem = ({ children }) => {
         <li
             onClick={(e) => {
                 e.preventDefault();
+                document.getElementById(menuId).scrollIntoView();
             }}
             className={`${styles.menuItem} ${themeStyle}`}
         >
-            <a href={`/${children.toLowerCase()}`}>{children}</a>
+            <a href={menuId}>{children}</a>
         </li>
     );
 };

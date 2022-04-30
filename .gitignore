@@ -118,3 +118,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Folder for no longer used resources
+unused

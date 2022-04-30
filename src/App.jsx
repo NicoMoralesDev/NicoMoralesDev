@@ -1,11 +1,11 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import styles from "./App.module.scss";
 import NavBar from "./components/nav/NavBar";
-import Home from "./components/home/Home";
-import Portfolio from "./components/portfolio/Portfolio";
-import Skills from "./components/skills/Skills";
-import Resources from "./components/resources/Resources";
+import Home from "./pages/home/Home";
+import Portfolio from "./pages/portfolio/Portfolio";
+import Skills from "./pages/skills/Skills";
+import Resources from "./pages/resources/Resources";
 import { ThemeContext } from "./Context";
 
 export function useMediaQuery(query) {
@@ -22,9 +22,9 @@ export function useMediaQuery(query) {
             setMatches(media.matches);
         };
 
-        media.addListener(listener);
+        media.addEventListener("change", listener);
 
-        return () => media.removeListener(listener);
+        return () => media.removeEventListener("change", listener);
     }, [matches, query]);
 
     return matches;
@@ -51,31 +51,29 @@ function App() {
     };
 
     return (
-        <Suspense fallback="loading">
-            <ThemeContext.Provider value={theme}>
-                <div className={`${styles.App} ${themeStyle}`}>
-                    <NavBar
-                        toggleTheme={handleToggleTheme}
-                        isNavBarOpen={isPageWide ? true : navBarOpen}
-                        toggleNavBar={handleToggleNavBar}
-                    />
-                    <div className={styles.content}>
-                        <header>
-                            <Home />
-                        </header>
-                        <section>
-                            <Portfolio />
-                        </section>
-                        <section>
-                            <Skills />
-                        </section>
-                        <section>
-                            <Resources />
-                        </section>
-                    </div>
+        <ThemeContext.Provider value={theme}>
+            <div className={`${styles.App} ${themeStyle}`}>
+                <NavBar
+                    toggleTheme={handleToggleTheme}
+                    toggleNavBar={handleToggleNavBar}
+                    isNavBarOpen={isPageWide ? true : navBarOpen}
+                />
+                <div className={styles.content}>
+                    <header id="home">
+                        <Home />
+                    </header>
+                    <section id="portfolio">
+                        <Portfolio />
+                    </section>
+                    <section id="skills">
+                        <Skills />
+                    </section>
+                    <section id="resources">
+                        <Resources />
+                    </section>
                 </div>
-            </ThemeContext.Provider>
-        </Suspense>
+            </div>
+        </ThemeContext.Provider>
     );
 }
 

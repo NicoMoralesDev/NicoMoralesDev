@@ -8,23 +8,17 @@ import {
     enFlagIcon,
     esFlagIcon,
     langIcon,
-} from "../../svgElements";
+} from "../ui/svgElements";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../Context";
 import { useTranslation } from "react-i18next";
+import { getMenuList } from "./menuItemsList";
 
 const MenuList = ({ toggleTheme }) => {
     const [isOptionsShowing, setIsOptionsSwhoing] = useState(false);
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
     const { t, i18n } = useTranslation();
-
-    const menuList = [
-        t("nav.home"),
-        t("nav.portfolio"),
-        t("nav.skills"),
-        t("nav.resources"),
-    ];
     const langs = ["en", "es"];
 
     const getFlag = (lang) => {
@@ -46,15 +40,12 @@ const MenuList = ({ toggleTheme }) => {
                             i18n.changeLanguage(lang);
                         }
                         setIsOptionsSwhoing(!isOptionsShowing);
-                        // console.log(i18n.languages);
                     }}
                     className={`${styles.flagItem} ${
                         !isOptionsShowing ? styles.hidden : null
                     }`}
                 >
-                    <a href={lang}>
-                        <SvgContainer>{getFlag(lang)}</SvgContainer>
-                    </a>
+                    <SvgContainer>{getFlag(lang)}</SvgContainer>
                 </li>
             );
         });
@@ -65,69 +56,44 @@ const MenuList = ({ toggleTheme }) => {
         setIsOptionsSwhoing(!isOptionsShowing);
     };
 
-    const themeIcon = (theme) => {
-        if (theme == "light") {
-            return (
-                <a href="dark">
-                    <SvgContainer>{sunIcon}</SvgContainer>
-                </a>
-            );
-        } else if (theme == "dark") {
-            return (
-                <a href="light">
-                    <SvgContainer>{moonIcon}</SvgContainer>
-                </a>
-            );
-        }
-    };
-
     return (
-        <menu className={`${styles.menu} ${themeStyle}`}>
-            {menuList.map((item) => {
-                return <MenuItem key={item}>{item}</MenuItem>;
-            })}
-            <li
-                onClick={toggleTheme}
-                className={`${stylesItem.menuItem} ${
-                    theme == "dark" ? stylesItem.dark : stylesItem.light
-                }`}
-            >
-                {themeIcon(theme)}
-            </li>
-            <li className={stylesItem.menuItem}>
-                <ul
-                    className={`
+        <menu>
+            <ul className={`${styles.menu} ${themeStyle}`}>
+                {getMenuList().map((item) => {
+                    return (
+                        <MenuItem key={item.menuId} menuId={item.menuId}>
+                            {item.menuName}
+                        </MenuItem>
+                    );
+                })}
+                <li
+                    onClick={toggleTheme}
+                    className={`${stylesItem.menuItem} ${
+                        theme == "dark" ? stylesItem.dark : stylesItem.light
+                    }`}
+                >
+                    <SvgContainer>
+                        {theme == "dark" ? moonIcon : sunIcon}
+                    </SvgContainer>
+                </li>
+                <li className={stylesItem.menuItem}>
+                    <ul
+                        className={`
                         ${styles.selector} ${isOptionsShowing && styles.opened}
                         
                     `}
-                >
-                    <li
-                        key="selector"
-                        className={styles.selectorItem}
-                        onClick={showOptions}
                     >
-                        {langIcon}
-                    </li>
-                    {/* <li
-                        key={"en"}
-                        onClick={showOptions}
-                        className={`${styles.selected}`}
-                    >
-                        <a href="en">
-                            <SvgContainer>{enFlagIcon}</SvgContainer>
-                        </a>
-                    </li>
-                    <li
-                        key={"es"}
-                        className={!isOptionsShowing ? styles.hidden : null}
-                    >
-                        <a href="es">
-                            <SvgContainer>{esFlagIcon}</SvgContainer>
-                        </a>
-                    </li> */}
-                    {showLangFlags()}
-                </ul>
-            </li>
+                        <li
+                            key="selector"
+                            className={styles.selectorItem}
+                            onClick={showOptions}
+                        >
+                            {langIcon}
+                        </li>
+                        {showLangFlags()}
+                    </ul>
+                </li>
+            </ul>
         </menu>
     );
 };

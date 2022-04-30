@@ -1,14 +1,18 @@
 @import "../../../styles/variables.scss";
 
 .cardContainer {
-    height: 20rem;
+    height: 40rem;
     perspective: 150rem;
     position: relative;
 
+    @media only screen and (min-width: $tablet) {
+        height: 20rem;
+    }
+
     & .cardSide {
         height: 20rem;
+        border-radius: 2rem;
         transition: all 0.8s ease;
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -18,37 +22,64 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
 
-    & .cardFront {
-    }
-
-    & .cardBack {
-        transform: rotateY(180deg);
-
-        padding: 1rem;
-    }
-
-    &:hover .cardFront {
-        transform: rotateY(-180deg);
-    }
-
-    &:hover .cardBack {
-        transform: rotateY(0);
+        @media only screen and (min-width: $tablet) {
+            position: absolute;
+        }
     }
 
     & img {
-        height: 120%;
+        width: 100%;
+        max-width: 32rem;
+        object-fit: contain;
+    }
+
+    @media only screen and (min-width: $tablet) {
+        & .cardFront {
+        }
+
+        & .cardBack {
+            transform: rotateY(180deg);
+
+            padding: 1rem;
+        }
+
+        &:hover .cardFront {
+            transform: rotateY(-180deg);
+        }
+
+        &:hover .cardBack {
+            transform: rotateY(0);
+        }
     }
 }
+
 .dark {
-    & .cardSide {
+    .cardFront {
         border: 0.2rem solid $white;
     }
 }
 
 .light {
-    & .cardSide {
+    .cardFront {
         border: 0.2rem solid $black;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .dark {
+        border: 0;
+
+        & .cardSide {
+            border: 0.2rem solid $white;
+        }
+    }
+
+    .light {
+        border: 0;
+
+        & .cardSide {
+            border: 0.2rem solid $black;
+        }
     }
 }

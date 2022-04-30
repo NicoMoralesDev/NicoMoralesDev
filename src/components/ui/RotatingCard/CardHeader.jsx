@@ -1,23 +1,25 @@
+import { useTranslation } from "react-i18next";
 import styles from "./cardHeader.module.scss";
 
 const CardHeader = ({ title, url, github }) => {
-    const gitHubLink =
-        github != null ? (
-            <a href={github} target="_blank">
-                GitHub
-            </a>
-        ) : (
-            "Private Code"
-        );
+    const { t } = useTranslation();
 
     return (
         <div className={styles.cardHeader}>
-            <h4 className={styles.title}>{title}</h4>
+            <h3 className={styles.title}>{title}</h3>
             <a href={url} target="_blank">
-                Visit Web
+                {t("portfolio.visitWeb")}
             </a>
-            {" | "}
-            <span>{gitHubLink}</span>
+            {github != null && (
+                <>
+                    {" | "}
+                    <span>
+                        <a href={github} target="_blank">
+                            GitHub
+                        </a>
+                    </span>
+                </>
+            )}
         </div>
     );
 };
