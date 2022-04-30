@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 import styles from "./App.module.scss";
 import NavBar from "./components/nav/NavBar";
@@ -45,8 +45,10 @@ function App() {
         e.preventDefault();
         if (theme == "dark") {
             setTheme("light");
+            setNavBarOpen(false);
         } else {
             setTheme("dark");
+            setNavBarOpen(false);
         }
     };
 

@@ -1,6 +1,13 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../Context";
+
 import { useTranslation } from "react-i18next";
+import Carousel from "../../components/ui/carousel/carousel";
+import styles from "./resources.module.scss";
 
 const Resources = () => {
+    const theme = useContext(ThemeContext);
+    const themeStyle = theme == "dark" ? styles.dark : styles.light;
     const { t } = useTranslation();
 
     return (
@@ -8,6 +15,11 @@ const Resources = () => {
             <h2>{t("resources.heading")}</h2>
             {/* Carrousels? */}
             <h3>{t("resources.development")}</h3>
+            <Carousel>
+                {/* <div className="active">slide1</div>
+                <div>slide2</div>
+                <div>slide3</div> */}
+            </Carousel>
             {/* Documentation and general dev resources */}
             <h3>{t("resources.design")}</h3>
             {/* Icons, fonts, color tools */}

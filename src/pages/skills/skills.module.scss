@@ -1,5 +1,48 @@
 @import "../../styles/variables.scss";
 
+.skillsIcons {
+    display: none;
+
+    div {
+        display: flex;
+        border-radius: 0.5rem;
+    }
+
+    @media only screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        svg {
+            padding: 0.5rem;
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    @media only screen and (min-width: $desktop) {
+        svg {
+            padding: 1rem;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    &.dark {
+        div {
+            border: 0.1rem solid $primary-orange;
+        }
+    }
+
+    &.light {
+        div {
+            border: 0.1rem solid $primary-blue;
+            background-color: $black;
+        }
+    }
+}
+
 .skillsContent {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -19,39 +62,16 @@
         min-height: 10rem;
         padding: 1rem;
     }
-}
 
-.skillsIcons {
-    display: none;
-
-    @media only screen and (min-width: $tablet) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-
-        svg {
-            width: 5rem;
-            height: 5rem;
+    &.dark {
+        div {
+            box-shadow: -1px -1px 2px 0px $primary-orange;
         }
     }
 
-    @media only screen and (min-width: $desktop) {
-        svg {
-            width: 10rem;
-            height: 10rem;
+    &.light {
+        div {
+            box-shadow: -1px -1px 2px 0px $primary-blue;
         }
-    }
-}
-
-.dark {
-    div {
-        box-shadow: -1px -1px 2px 0px $primary-orange;
-    }
-}
-
-.light {
-    div {
-        box-shadow: -1px -1px 2px 0px $primary-blue;
     }
 }

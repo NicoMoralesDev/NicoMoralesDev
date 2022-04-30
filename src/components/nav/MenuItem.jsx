@@ -1,4 +1,4 @@
-import { useContext, forwardRef } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../../Context";
 import styles from "./menuItem.module.scss";
 

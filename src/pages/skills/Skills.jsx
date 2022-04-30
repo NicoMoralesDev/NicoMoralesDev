@@ -34,9 +34,9 @@ const Skills = () => {
     return (
         <>
             <h2>{t("skills.heading")}</h2>
-            <div className={styles.skillsIcons}>
-                {svgIcons.map((item) => {
-                    return <div>{item}</div>;
+            <div className={`${styles.skillsIcons} ${themeStyle}`}>
+                {svgIcons.map((item, id) => {
+                    return <div key={id}>{item}</div>;
                 })}
             </div>
             <div className={`${styles.skillsContent} ${themeStyle}`}>

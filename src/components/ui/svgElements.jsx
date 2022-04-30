@@ -1,6 +1,6 @@
 export const menuIcon = (
     <svg
-        ariaLabel="Menu Icon"
+        aria-label="Menu Icon"
         width="512px"
         height="512px"
         viewBox="0 0 512 512"
@@ -44,7 +44,7 @@ export const menuIcon = (
 
 export const sunIcon = (
     <svg
-        ariaLabel="Sun Icon"
+        aria-label="Sun Icon"
         width="512px"
         height="512px"
         viewBox="0 0 512 512"
@@ -106,7 +106,7 @@ export const sunIcon = (
 
 export const moonIcon = (
     <svg
-        ariaLabel="Moon Icon"
+        aria-label="Moon Icon"
         width="512px"
         height="512px"
         viewBox="0 0 512 512"
@@ -124,7 +124,7 @@ export const moonIcon = (
 
 export const enFlagIcon = (
     <svg
-        ariaLabel="English Flag"
+        aria-label="English Flag"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +342,7 @@ c11.151,2.199,22.583,3.631,34.232,4.215c3.938,0.191,7.872,0.299,11.81,0.299C253.
 
 export const esFlagIcon = (
     <svg
-        ariaLabel="Spanish Flag"
+        aria-label="Spanish Flag"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -425,7 +425,7 @@ export const esFlagIcon = (
 
 export const langIcon = (
     <svg
-        ariaLabel="Language Icon"
+        aria-label="Language Icon"
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -461,7 +461,7 @@ export const langIcon = (
 export const htmlIcon = (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        ariaLabel="HTML5"
+        aria-label="HTML5"
         role="img"
         viewBox="0 0 512 512"
     >
@@ -481,7 +481,7 @@ export const htmlIcon = (
 export const cssIcon = (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        ariaLabel="CSS3"
+        aria-label="CSS3"
         role="img"
         viewBox="0 0 512 512"
     >
@@ -500,7 +500,7 @@ export const cssIcon = (
 
 export const jsIcon = (
     <svg
-        ariaLabel="JavaScript"
+        aria-label="JavaScript"
         width="256px"
         height="256px"
         viewBox="0 0 256 256"
@@ -514,7 +514,7 @@ export const jsIcon = (
 
 export const tsIcon = (
     <svg
-        ariaLabel="TypeScript"
+        aria-label="TypeScript"
         width="400px"
         height="400px"
         viewBox="0 0 400 400"
@@ -532,11 +532,10 @@ export const tsIcon = (
 export const reactIcon = (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        ariaLabel="React"
+        aria-label="React"
         role="img"
         viewBox="0 0 512 512"
     >
-        <rect width="512" height="512" rx="15%" fill="#000" />
         <circle cx="256" cy="256" r="36" fill="#61dafb" />
         <path
             stroke="#61dafb"
@@ -550,12 +549,11 @@ export const reactIcon = (
 export const javaIcon = (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        ariaLabel="Java"
+        aria-label="Java"
         role="img"
         viewBox="0 0 512 512"
         fill="none"
     >
-        <rect width="512" height="512" rx="15%" fill="#000" />
         <path
             d="M274 235c18 21-5 40-5 40s47-24 25-54-35-42 48-90C342 130 211 163 274 235M294 53s40 40-38 100c-62 49-14 77 0 109-36-33-63-61-45-88C238 134 310 115 294 53"
             fill="#f8981d"
@@ -569,12 +567,11 @@ export const javaIcon = (
 
 export const goLangIcon = (
     <svg
-        ariaLabel="GoLang"
-        viewBox="0 0 254.5 254.5"
+        aria-label="GoLang"
+        viewBox="0 -14 254.5 254.5"
         xmlns="http://www.w3.org/2000/svg"
     >
         <title>file_type_go</title>
-        <rect width="254.5" height="254.5" rx="15%" fill="#000" />
         <path
             d="M-46.926,89c-.621,0-.777-.311-.466-.777l3.262-4.194a2.225,2.225,0,0,1,1.708-.777H13.026c.621,0,.777.466.466.932l-2.64,4.038a2.367,2.367,0,0,1-1.553.932Z"
             fill="#00acd7"
@@ -600,14 +597,13 @@ export const goLangIcon = (
 
 export const sqlIcon = (
     <svg
-        ariaLabel="SQL Database"
+        aria-label="SQL Database"
         width="32px"
         height="32px"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
     >
         <title>file_type_sql</title>
-        <rect width="32" height="32" rx="15%" fill="#000" />
         <path
             d="M8.562,15.256A21.159,21.159,0,0,0,16,16.449a21.159,21.159,0,0,0,7.438-1.194c1.864-.727,2.525-1.535,2.525-2V9.7a10.357,10.357,0,0,1-2.084,1.076A22.293,22.293,0,0,1,16,12.078a22.36,22.36,0,0,1-7.879-1.3A10.28,10.28,0,0,1,6.037,9.7v3.55C6.037,13.724,6.7,14.528,8.562,15.256Z"
             fill="#ffda44"
@@ -627,11 +623,10 @@ export const sqlIcon = (
 export const gitIcon = (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        ariaLabel="Git"
+        aria-label="Git"
         role="img"
         viewBox="0 0 512 512"
     >
-        <rect width="512" height="512" rx="15%" fill="#000" />
         <path
             fill="#f05133"
             d="M440.8 238.9L273 71.2a24.7 24.7 0 00-35 0l-34.8 34.9l44.2 44.1a29.4 29.4 0 0137.2 37.5l42.5 42.5a29.4 29.4 0 11-17.6 16.6l-39.7-39.7v104.5a29.4 29.4 0 11-24.2-.9V205.3a29.4 29.4 0 01-16-38.6l-43.5-43.5l-115 115a24.7 24.7 0 000 34.9L239 440.8a24.7 24.7 0 0035 0l166.9-167a24.7 24.7 0 000-34.9"

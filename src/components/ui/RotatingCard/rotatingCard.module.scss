@@ -56,13 +56,13 @@
 
 .dark {
     .cardFront {
-        border: 0.2rem solid $white;
+        border: 0.1rem solid $primary-orange;
     }
 }
 
 .light {
     .cardFront {
-        border: 0.2rem solid $black;
+        border: 0.1rem solid $primary-blue;
     }
 }
 
@@ -71,7 +71,7 @@
         border: 0;
 
         & .cardSide {
-            border: 0.2rem solid $white;
+            border: 0.1rem solid $primary-orange;
         }
     }
 
@@ -79,7 +79,7 @@
         border: 0;
 
         & .cardSide {
-            border: 0.2rem solid $black;
+            border: 0.1rem solid $primary-blue;
         }
     }
 }
