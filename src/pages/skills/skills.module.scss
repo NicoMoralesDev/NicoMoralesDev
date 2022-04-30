@@ -7,6 +7,7 @@
 
     @media only screen and (min-width: $tablet) {
         grid-template-columns: repeat(3, 1fr);
+        margin-top: 4rem;
     }
 
     @media only screen and (min-width: $desktop) {
@@ -17,6 +18,29 @@
         height: 100%;
         min-height: 10rem;
         padding: 1rem;
+    }
+}
+
+.skillsIcons {
+    display: none;
+
+    @media only screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        svg {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    @media only screen and (min-width: $desktop) {
+        svg {
+            width: 10rem;
+            height: 10rem;
+        }
     }
 }
 

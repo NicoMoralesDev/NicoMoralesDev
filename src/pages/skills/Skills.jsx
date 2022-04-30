@@ -1,16 +1,44 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
-import styles from "./skills.module.scss";
 import { useTranslation } from "react-i18next";
+import styles from "./skills.module.scss";
+import {
+    htmlIcon,
+    cssIcon,
+    jsIcon,
+    tsIcon,
+    reactIcon,
+    javaIcon,
+    goLangIcon,
+    sqlIcon,
+    gitIcon,
+} from "../../components/ui/svgElements";
 
 const Skills = () => {
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
     const { t } = useTranslation();
 
+    const svgIcons = [
+        htmlIcon,
+        cssIcon,
+        jsIcon,
+        tsIcon,
+        reactIcon,
+        javaIcon,
+        goLangIcon,
+        sqlIcon,
+        gitIcon,
+    ];
+
     return (
         <>
             <h2>{t("skills.heading")}</h2>
+            <div className={styles.skillsIcons}>
+                {svgIcons.map((item) => {
+                    return <div>{item}</div>;
+                })}
+            </div>
             <div className={`${styles.skillsContent} ${themeStyle}`}>
                 <div>
                     <h3>{t("skills.front-end")}</h3>
