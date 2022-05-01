@@ -634,21 +634,37 @@ export const gitIcon = (
     </svg>
 );
 
-export const arrow = (
+export const leftArrow = (
     <svg
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        width="558.957px"
-        height="558.957px"
-        viewBox="0 0 558.957 558.957"
-        enableBackground="new 0 0 558.957 558.957"
+        viewBox="0 0 490 490"
+        enableBackground="new 0 0 490 490"
     >
         <g>
             <g>
-                <polygon points="462.745,0 96.212,279.479 462.745,558.957 462.745,419.221 278.713,279.479 462.745,139.738 		" />
+                <polygon points="249.888,490 8.139,244.996 249.888,0 481.861,0 239.71,244.996 481.861,490" />
+            </g>
+        </g>
+    </svg>
+);
+
+export const rightArrow = (
+    <svg
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="0 0 490 490"
+        enableBackground="new 0 0 490 490"
+    >
+        <g>
+            <g>
+                <polygon points="240.112,0 481.861,245.004 240.112,490 8.139,490 250.29,245.004 8.139,0" />
             </g>
         </g>
     </svg>

@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import coolorLogo from "../../images/coolors-co.png";
 
 export function getDevelopmentList() {
     const { t } = useTranslation();
@@ -76,7 +77,7 @@ export function getDesignList() {
         },
         {
             link: "https://coolors.co/",
-            logo: "src/images/coolors-co.png",
+            logo: coolorLogo,
             title: "Coolors - The super fast color palettes generator!",
             description:
                 "Generate or browse beautiful color combinations for your designs.",

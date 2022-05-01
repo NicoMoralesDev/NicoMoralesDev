@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { arrow } from "../svgElements";
+import { leftArrow, rightArrow } from "../svgElements";
 import styles from "./carousel.module.scss";
 import { useSwipeable } from "react-swipeable";
 
@@ -62,7 +62,7 @@ const CarouselContainer = ({ carouselList, theme }) => {
                 className={`${styles.arrow} ${styles.left}`}
                 onClick={moveLeftHandler}
             >
-                {arrow}
+                {leftArrow}
             </div>
             <div className={styles.carouselViewer} {...swipeHandler}>
                 {listedItems}
@@ -74,7 +74,7 @@ const CarouselContainer = ({ carouselList, theme }) => {
                 className={`${styles.arrow} ${styles.right}`}
                 onClick={moveRightHandler}
             >
-                {arrow}
+                {rightArrow}
             </div>
         </div>
     );
