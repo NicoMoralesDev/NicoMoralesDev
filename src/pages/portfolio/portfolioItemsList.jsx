@@ -33,8 +33,8 @@ export function getPortfolioList() {
         {
             cardHeader: {
                 title: t("portfolio.itemTitle-2"),
-                url: null,
-                github: null,
+                url: "/blog",
+                github: "https://github.com/NicoMoralesDev/NicoMoralesBlog",
             },
             cardFront: {
                 imageSrc: null,
@@ -46,7 +46,7 @@ export function getPortfolioList() {
         {
             cardHeader: {
                 title: t("portfolio.itemTitle-3"),
-                url: null,
+                url: "http://niccrowdeals.com",
                 github: null,
             },
             cardFront: {

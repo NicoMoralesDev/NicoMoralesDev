@@ -8,8 +8,8 @@ const CarouselContainer = ({ carouselList, theme }) => {
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
     const swipeHandler = useSwipeable({
-        onSwipedLeft: () => moveLeftHandler(),
-        onSwipedRight: () => moveRightHandler(),
+        onSwipedRight: () => moveLeftHandler(),
+        onSwipedLeft: () => moveRightHandler(),
         swipeDuration: 300,
         preventScrollOnSwipe: true,
         trackMouse: true,
@@ -40,13 +40,15 @@ const CarouselContainer = ({ carouselList, theme }) => {
                     id == activeItem ? styles.active : ""
                 }`}
             >
-                <img src={item.logo} alt="Icon from resource" />
+                {item.logo ? (
+                    <img src={item.logo} alt="Icon from resource" />
+                ) : null}
                 <div className={styles.resourceInfo}>
-                    <h3>
+                    <h4>
                         <a href={item.link} target="_blank">
                             {item.title}
                         </a>
-                    </h3>
+                    </h4>
 
                     <p>{item.description}</p>
                 </div>
