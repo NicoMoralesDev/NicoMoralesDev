@@ -9,8 +9,8 @@
         "developer": "Full-Stack Developer",
         "aboutMe": "About Me",
         "text1": "Hi, I'm ",
-        "text2": ", Full-stack Developer with more than 7 years of expertise. I worked mainly in Java back-end roles, developing API and RESTful services but also in the front-end. Years of experience working in projects with agile, continuous integration, unit tests and code reviews. Always willing to learn and looking for new challenges.",
-        "button": "Contact Me"
+        "text2": ", Full-stack Developer with more than 7 years of experience. I've worked mainly in Java back-end roles, developing API and RESTful services but also in the front-end developing amazing websites. Years of experience working in projects with agile, continuous integration, unit tests and code reviews. Always willing to learn and looking for new challenges.",
+        "contactMe": "Contact Me"
     },
     "portfolio": {
         "heading": "Portfolio",

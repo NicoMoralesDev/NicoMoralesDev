@@ -30,7 +30,10 @@ const Home = () => {
                 {t("home.text2")}
             </p>
             <div className={styles.contactMe}>
-                <span className={styles.contactText}>Contact me: </span>
+                <span className={styles.contactText}>
+                    {t("home.contactMe")}
+                    {": "}
+                </span>
                 <div className={styles.contactIconsContainer}>
                     <SvgContainer>
                         <a href="mailto:nicomorales.dev@gmail.com">

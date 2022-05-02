@@ -9,8 +9,8 @@
         "developer": "Desarrollador Full Stack",
         "aboutMe": "Sobre Mi",
         "text1": "Hola, Soy ",
-        "text2": ", Full-stack Developer with more than 7 years of expertise. I worked mainly in Java back-end roles, developing API and RESTful services but also in the front-end. Years of experience working in projects with agile, continuous integration, unit tests and code reviews.",
-        "button": "Contáctame"
+        "text2": ", Desarrollador Full Stack con más de 7 años de experiencia. He trabajado principalmente como Java back end, desarrollando APIs y servicios RESTful pero también como front end desarrollando increíbles sitios web. Años de experiencia trabajando en proyectos con metodologías ágiles, integración continua, tests unitarios y revisión de código. Siempre dispuesto a aprender y buscando nuevos desafíos.",
+        "contactMe": "Contáctame"
     },
     "portfolio": {
         "heading": "Portafolio",

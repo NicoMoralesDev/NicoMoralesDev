@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import coolorLogo from "../../images/coolors-co.png";
-import svgRepoLogo from "../../images/svg-repo-48x48.png";
+
+import coolorLogo from "../../images/coolors-co.webp";
+import svgRepoLogo from "../../images/svgrepo.webp";
 
 export function getDevelopmentList() {
     const { t } = useTranslation();
