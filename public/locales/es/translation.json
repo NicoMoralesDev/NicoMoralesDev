@@ -45,10 +45,18 @@
     "resources": {
         "heading": "Recursos",
         "development": "Desarrollo",
+        "developmentDesc": "Documentación y recursos en general",
         "design": "Diseño",
-        "html-css": "HTML y CSS",
+        "designDesc": "Inspiración, herramientas de color y más para el diseño web",
         "assets": "Assets",
+        "assetsDesc": "Imágenes, videos, fuentes, iconos...",
+        "html-css": "HTML y CSS",
+        "html-cssDesc": "Referencias, trucos, atajos y recursos útiles",
+        "javascript": "JavaScript",
+        "javascriptDesc": "Referencias, tutoriales y recursos útiles",
         "deployment": "Optmización y Despliegue",
-        "more": "Más"
+        "deploymentDesc": "Herramientas de optimización y despliegue, inspectores de velocidad, alojamientos web y más...",
+        "extras": "Extras",
+        "extrasDesc": "Noticias, artículos, comunidades y más"
     }
 }
