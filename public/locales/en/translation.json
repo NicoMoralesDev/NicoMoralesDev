@@ -9,7 +9,7 @@
         "developer": "Full-Stack Developer",
         "aboutMe": "About Me",
         "text1": "Hi, I'm ",
-        "text2": ", Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "text2": ", Full-stack Developer with more than 7 years of expertise. I worked mainly in Java back-end roles, developing API and RESTful services but also in the front-end. Years of experience working in projects with agile, continuous integration, unit tests and code reviews. Always willing to learn and looking for new challenges.",
         "button": "Contact Me"
     },
     "portfolio": {
@@ -45,10 +45,18 @@
     "resources": {
         "heading": "Resources",
         "development": "Development",
+        "developmentDesc": "Documentation and general dev resources",
         "design": "Design",
-        "html-css": "HTML and CSS",
+        "designDesc": "Inspiration, color tools and more for web design",
         "assets": "Assets",
+        "assetsDesc": "Images, videos, fonts, icons..",
+        "html-css": "HTML and CSS",
+        "html-cssDesc": "References, cheatsheets and useful resources",
+        "javascript": "JavaScript",
+        "javascriptDesc": "References, tutorials and useful resources",
         "deployment": "Optmization and Deployment",
-        "more": "More"
+        "deploymentDesc": "Optmization tools, speed checkers, hosting and more...",
+        "extras": "Extras",
+        "extrasDesc": "News, articles, communities and more"
     }
 }

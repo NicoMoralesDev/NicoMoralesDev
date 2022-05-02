@@ -41,17 +41,20 @@ const CarouselContainer = ({ carouselList, theme }) => {
                 }`}
             >
                 {item.logo ? (
-                    <img src={item.logo} alt="Icon from resource" />
+                    <img
+                        src={item.logo}
+                        alt="Icon from resource"
+                        className={styles.image}
+                    />
                 ) : null}
-                <div className={styles.resourceInfo}>
-                    <h4>
-                        <a href={item.link} target="_blank">
-                            {item.title}
-                        </a>
-                    </h4>
 
-                    <p>{item.description}</p>
-                </div>
+                <h4 className={styles.title}>
+                    <a href={item.link} target="_blank">
+                        {item.title}
+                    </a>
+                </h4>
+
+                <p className={styles.text}>{item.description}</p>
             </div>
         );
     });

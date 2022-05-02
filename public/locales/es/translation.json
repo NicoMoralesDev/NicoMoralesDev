@@ -6,10 +6,10 @@
         "home": "Inicio"
     },
     "home": {
-        "developer": "Desarrollador Full Stack",
+        "developer": "Desarrollador Full-Stack",
         "aboutMe": "Sobre Mi",
         "text1": "Hola, Soy ",
-        "text2": ", Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "text2": ", Full-stack Developer with more than 7 years of expertise. I worked mainly in Java back-end roles, developing API and RESTful services but also in the front-end. Years of experience working in projects with agile, continuous integration, unit tests and code reviews.",
         "button": "Contáctame"
     },
     "portfolio": {

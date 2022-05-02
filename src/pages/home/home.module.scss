@@ -9,14 +9,14 @@
     justify-content: space-evenly;
     font-size: calc(10px + 2vmin);
 
-    & img {
+    .photo {
         width: 20rem;
         height: 20rem;
         border-radius: 100rem;
         margin-bottom: 4rem;
     }
 
-    p {
+    .whoiam {
         margin-bottom: 4rem;
         line-height: 4rem;
 
@@ -33,20 +33,50 @@
             font-weight: 700;
         }
     }
-}
 
-.dark {
-    p {
-        & strong {
-            color: $primary-orange;
+    .contactMe {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+
+        .contactText {
+            font-weight: 700;
+        }
+
+        .contactIconsContainer {
+            display: flex;
+            gap: 1rem;
+        }
+
+        svg {
+            width: 3rem;
+            height: 3rem;
         }
     }
 }
 
+.dark {
+    .whoiam {
+        & strong {
+            color: $primary-orange;
+        }
+    }
+
+    .contactMe {
+        color: $primary-blue;
+        box-shadow: -1px -1px 3px 0px $primary-orange;
+    }
+}
+
 .light {
-    p {
+    .whoiam {
         & strong {
             color: $primary-blue;
         }
+    }
+
+    .contactMe {
+        color: $primary-orange;
+        box-shadow: -1px -1px 3px 0px $primary-blue;
     }
 }
