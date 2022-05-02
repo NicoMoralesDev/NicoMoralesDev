@@ -14,7 +14,7 @@ import { ThemeContext } from "../../Context";
 import { useTranslation } from "react-i18next";
 import { getMenuList } from "./menuItemsList";
 
-const MenuList = ({ toggleTheme }) => {
+const MenuList = ({ toggleTheme, toggleNavBar }) => {
     const [isOptionsShowing, setIsOptionsSwhoing] = useState(false);
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
@@ -40,6 +40,7 @@ const MenuList = ({ toggleTheme }) => {
                             i18n.changeLanguage(lang);
                         }
                         setIsOptionsSwhoing(!isOptionsShowing);
+                        toggleNavBar();
                     }}
                     className={`${styles.flagItem} ${
                         !isOptionsShowing ? styles.hidden : null
@@ -61,7 +62,11 @@ const MenuList = ({ toggleTheme }) => {
             <ul className={`${styles.menu} ${themeStyle}`}>
                 {getMenuList().map((item) => {
                     return (
-                        <MenuItem key={item.menuId} menuId={item.menuId}>
+                        <MenuItem
+                            key={item.menuId}
+                            menuId={item.menuId}
+                            toggleNavBar={toggleNavBar}
+                        >
                             {item.menuName}
                         </MenuItem>
                     );

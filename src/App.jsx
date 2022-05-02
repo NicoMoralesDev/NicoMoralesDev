@@ -34,6 +34,18 @@ function App() {
     const [navBarOpen, setNavBarOpen] = useState(false);
     const [theme, setTheme] = useState("dark");
 
+    useEffect(() => {
+        const storedPreference = localStorage.getItem("themePreference");
+        if (storedPreference) {
+            setTheme(storedPreference);
+        } else {
+            const prefersDarkMode = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+            setTheme(prefersDarkMode ? "dark" : "light");
+        }
+    }, []);
+
     const isPageWide = useMediaQuery("(min-width: 800px)");
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
@@ -45,9 +57,11 @@ function App() {
         e.preventDefault();
         if (theme == "dark") {
             setTheme("light");
+            localStorage.setItem("themePreference", "light");
             setNavBarOpen(false);
         } else {
             setTheme("dark");
+            localStorage.setItem("themePreference", "dark");
             setNavBarOpen(false);
         }
     };

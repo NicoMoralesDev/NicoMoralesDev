@@ -6,7 +6,7 @@ import SvgContainer from "../ui/SvgContainer";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
 
-const NavBar = ({ toggleTheme, isNavBarOpen, toggleNavBar }) => {
+const NavBar = ({ toggleTheme, toggleNavBar, isNavBarOpen }) => {
     const theme = useContext(ThemeContext);
     const themeStyle = theme == "dark" ? styles.dark : styles.light;
 
@@ -25,7 +25,12 @@ const NavBar = ({ toggleTheme, isNavBarOpen, toggleNavBar }) => {
                     />
                     <span className={styles.title}>nicomorales.dev</span>
                 </div>
-                {isNavBarOpen ? <MenuList toggleTheme={toggleTheme} /> : null}
+                {isNavBarOpen ? (
+                    <MenuList
+                        toggleTheme={toggleTheme}
+                        toggleNavBar={toggleNavBar}
+                    />
+                ) : null}
             </div>
         </nav>
     );
