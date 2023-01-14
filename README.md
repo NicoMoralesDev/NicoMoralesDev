@@ -12,7 +12,7 @@ I'm Nico, an enthusiastic Full-Stack Developer
 
 ##### Portfolio:
 
--   Nexa.com
+-   wearenexa.com
 -   QuagliaLodigiani.com.ar
 
 ##### Currently Working on:
