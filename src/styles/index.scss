@@ -1,21 +1,21 @@
 @use "variables" as *;
 
 @font-face {
-    font-family: $font-primary;
+    font-family: "Roboto";
     src: url("../fonts/Roboto-Regular.ttf");
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: $font-primary;
+    font-family: "Roboto";
     src: url("../fonts/Roboto-Bold.ttf");
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: $font-primary;
+    font-family: "Fashion Fetish";
     src: url("../fonts/Fashion Fetish Heavy.ttf");
     font-weight: 900;
     font-display: swap;
@@ -26,54 +26,69 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-    font-weight: 400;
-
+    font-size: 62.5%;
     scroll-behavior: smooth;
-    display: grid;
-    // justify-content: center;
+    scroll-padding-top: 6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    font-family: $font-primary, $font-display;
-    font-size: 2rem;
+    font-family: $font-primary;
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 3.2rem;
-    letter-spacing: 0;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
 }
 
 a,
 a:visited {
     text-decoration: none;
-    line-height: 0;
+    transition: color $transition-fast;
 }
 
-h1,
-h2 {
-    font-size: 2.6rem;
+h1 {
+    font-family: "Fashion Fetish", $font-display;
+    font-size: clamp(3.2rem, 5vw, 5.6rem);
     font-weight: 900;
-    margin-bottom: 5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.6rem;
+}
+
+h2 {
+    font-family: "Fashion Fetish", $font-display;
+    font-size: clamp(2.4rem, 3vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 3.2rem;
 }
 
 h3 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.01em;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 ul {
     list-style: none;
+}
+
+::selection {
+    background-color: $orange-glow;
+    color: $primary-orange;
 }

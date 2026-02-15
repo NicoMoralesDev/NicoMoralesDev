@@ -3,75 +3,172 @@
 .skillsIcons {
     display: none;
 
-    div {
-        display: flex;
-        border-radius: 0.5rem;
-    }
-
     @media only screen and (min-width: $tablet) {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.6rem;
+        margin-bottom: 4.8rem;
+    }
+
+    .iconItem {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 0.6rem;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        transition: all $transition-fast;
 
         svg {
-            padding: 0.5rem;
-            width: 5rem;
-            height: 5rem;
+            width: 4rem;
+            height: 4rem;
+
+            @media only screen and (min-width: $desktop) {
+                width: 5.6rem;
+                height: 5.6rem;
+            }
         }
     }
 
-    @media only screen and (min-width: $desktop) {
-        svg {
-            padding: 1rem;
-            width: 10rem;
-            height: 10rem;
-        }
+    .iconLabel {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
     }
 
     &.dark {
-        div {
-            border: 0.1rem solid $primary-orange;
+        .iconItem {
+            background-color: $black-card;
+            border: 1px solid rgba($primary-orange, 0.1);
+
+            &:hover {
+                border-color: rgba($primary-orange, 0.4);
+                transform: translateY(-2px);
+            }
+        }
+
+        .iconLabel {
+            color: $gray-light;
         }
     }
 
     &.light {
-        div {
-            border: 0.1rem solid $primary-blue;
-            background-color: $black;
+        .iconItem {
+            background-color: $white-pure;
+            border: 1px solid rgba($black, 0.06);
+            box-shadow: 0 1px 3px rgba($black, 0.04);
+
+            &:hover {
+                border-color: rgba($primary-orange, 0.3);
+                transform: translateY(-2px);
+            }
+        }
+
+        .iconLabel {
+            color: $gray-mid;
         }
     }
 }
 
 .skillsContent {
     display: grid;
-    grid-template-columns: repeat(1, auto);
-    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
     @media only screen and (min-width: $tablet) {
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 4rem;
     }
 
     @media only screen and (min-width: $desktop) {
         grid-template-columns: repeat(5, 1fr);
     }
 
-    div {
-        height: 100%;
-        min-height: 10rem;
-        padding: 2rem;
+    .skillCard {
+        padding: 2.4rem;
+        border-radius: 1.2rem;
+        transition: transform $transition-fast;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.6rem;
+            padding-bottom: 1rem;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        li {
+            font-size: 1.4rem;
+        }
+    }
+
+    .skillTag {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        border-radius: 2rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        transition: all $transition-fast;
+    }
+
+    .learning {
+        font-style: italic;
+        opacity: 0.7;
     }
 
     &.dark {
-        div {
-            box-shadow: -1px -1px 3px 0px $primary-orange;
+        .skillCard {
+            background-color: $black-card;
+            border: 1px solid rgba($primary-orange, 0.08);
+
+            h3 {
+                color: $primary-orange;
+                border-bottom: 1px solid rgba($primary-orange, 0.15);
+            }
+        }
+
+        .skillTag {
+            background-color: rgba($primary-orange, 0.08);
+            color: $white-muted;
+            border: 1px solid rgba($primary-orange, 0.1);
+        }
+
+        .learning {
+            border-style: dashed;
         }
     }
 
     &.light {
-        div {
-            box-shadow: -1px -1px 3px 0px $primary-blue;
+        .skillCard {
+            background-color: $white-pure;
+            border: 1px solid rgba($black, 0.06);
+            box-shadow: 0 1px 3px rgba($black, 0.04);
+
+            h3 {
+                color: $primary-orange;
+                border-bottom: 1px solid rgba($primary-orange, 0.15);
+            }
+        }
+
+        .skillTag {
+            background-color: rgba($primary-orange, 0.06);
+            color: $gray-dark;
+            border: 1px solid rgba($primary-orange, 0.12);
+        }
+
+        .learning {
+            border-style: dashed;
         }
     }
 }

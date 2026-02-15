@@ -1,0 +1,87 @@
+@use "../styles/variables" as *;
+
+.footer {
+    margin-top: $section-gap;
+    padding: 4rem 2.4rem;
+    text-align: center;
+    transition: background-color $transition-normal, color $transition-normal;
+
+    @media only screen and (min-width: $tablet) {
+        padding: 4rem 4.8rem;
+    }
+}
+
+.footerContent {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.copyright {
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    a {
+        font-size: 1.3rem;
+        font-weight: 500;
+        transition: color $transition-fast;
+    }
+}
+
+.divider {
+    font-size: 1.2rem;
+    opacity: 0.3;
+}
+
+.dark {
+    border-top: 1px solid rgba($primary-orange, 0.1);
+
+    .copyright {
+        color: $gray-light;
+
+        strong {
+            color: $primary-orange;
+        }
+    }
+
+    .footerLinks a {
+        color: $gray-light;
+
+        &:hover {
+            color: $primary-orange;
+        }
+    }
+}
+
+.light {
+    border-top: 1px solid rgba($black, 0.08);
+
+    .copyright {
+        color: $gray-mid;
+
+        strong {
+            color: $primary-orange;
+        }
+    }
+
+    .footerLinks a {
+        color: $gray-mid;
+
+        &:hover {
+            color: $primary-orange;
+        }
+    }
+}

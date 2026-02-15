@@ -1,82 +1,182 @@
 @use "../../styles/variables" as *;
 
 .home {
-    min-height: 85vh;
-
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: calc(10px + 2vmin);
+    justify-content: center;
 
-    .photo {
-        width: 20rem;
-        height: 20rem;
-        border-radius: 100rem;
-        margin-bottom: 4rem;
-    }
-
-    .whoiam {
-        margin-bottom: 4rem;
-        line-height: 4rem;
+    .heroTop {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 4rem;
 
         @media only screen and (min-width: $tablet) {
-            padding: 0 4rem;
-            margin-bottom: 2rem;
-        }
-
-        @media only screen and (min-width: $desktop) {
-            padding: 0 8rem;
-        }
-
-        & strong {
-            font-weight: 700;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6rem;
         }
     }
 
-    .contactMe {
-        display: flex;
-        gap: 2rem;
-        padding: 2rem;
+    .heroText {
+        flex: 1;
 
-        .contactText {
+        .greeting {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.2rem;
             font-weight: 700;
         }
 
-        .contactIconsContainer {
-            display: flex;
-            gap: 1rem;
+        h1 {
+            margin-bottom: 0.8rem;
         }
 
-        svg {
-            width: 3rem;
-            height: 3rem;
+        .role {
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+            font-weight: 700;
+            margin-bottom: 2.4rem;
+            color: $primary-orange;
         }
+
+        .bio {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            margin-bottom: 3.2rem;
+            max-width: 52rem;
+
+            & strong {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .socialLinks {
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+    }
+
+    .socialLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        transition: all $transition-fast;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .photoContainer {
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .photo {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+
+        @media only screen and (min-width: $tablet) {
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+
+    .photoGlow {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-radius: 50%;
+        z-index: 0;
     }
 }
 
 .dark {
-    .whoiam {
-        & strong {
-            color: $primary-orange;
+    .greeting {
+        color: $primary-orange;
+    }
+
+    .bio strong {
+        color: $primary-orange;
+    }
+
+    .socialLink {
+        background-color: $black-card;
+        border: 1px solid rgba($primary-orange, 0.2);
+
+        svg {
+            fill: $white-muted;
+        }
+
+        &:hover {
+            background-color: rgba($primary-orange, 0.15);
+            border-color: $primary-orange;
+            transform: translateY(-2px);
+
+            svg {
+                fill: $primary-orange;
+            }
         }
     }
 
-    .contactMe {
-        color: $primary-blue;
-        box-shadow: -1px -1px 3px 0px $primary-orange;
+    .photo {
+        border: 3px solid rgba($primary-orange, 0.3);
+    }
+
+    .photoGlow {
+        background: linear-gradient(135deg, $primary-orange, transparent 60%);
+        opacity: 0.3;
     }
 }
 
 .light {
-    .whoiam {
-        & strong {
-            color: $primary-blue;
+    .greeting {
+        color: $primary-orange;
+    }
+
+    .bio strong {
+        color: $primary-orange;
+    }
+
+    .socialLink {
+        background-color: $white;
+        border: 1px solid rgba($black, 0.1);
+
+        svg {
+            fill: $gray-dark;
+        }
+
+        &:hover {
+            background-color: rgba($primary-orange, 0.08);
+            border-color: $primary-orange;
+            transform: translateY(-2px);
+
+            svg {
+                fill: $primary-orange;
+            }
         }
     }
 
-    .contactMe {
-        color: $primary-orange;
-        box-shadow: -1px -1px 3px 0px $primary-blue;
+    .photo {
+        border: 3px solid rgba($primary-orange, 0.2);
+    }
+
+    .photoGlow {
+        background: linear-gradient(135deg, $primary-orange, transparent 60%);
+        opacity: 0.15;
     }
 }

@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Skills from "./pages/skills/Skills";
 import Resources from "./pages/resources/Resources";
+import Footer from "./components/Footer";
 import { ThemeContext } from "./Context";
 
 export function useMediaQuery(query) {
@@ -88,6 +89,7 @@ function App() {
                         <Resources />
                     </section>
                 </div>
+                <Footer />
             </div>
         </ThemeContext.Provider>
     );

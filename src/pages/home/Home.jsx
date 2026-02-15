@@ -3,7 +3,6 @@ import photo from "../../images/yo_perfil.webp";
 import { useContext } from "react";
 import { ThemeContext } from "../../Context";
 import { useTranslation } from "react-i18next";
-import SvgContainer from "../../components/ui/SvgContainer";
 import {
     githubIcon,
     gmailIcon,
@@ -17,45 +16,49 @@ const Home = () => {
 
     return (
         <div className={`${styles.home} ${themeStyle}`}>
-            <h1>
-                Nicolas Morales
-                <br />
-                {t("home.developer")}
-            </h1>
-            <img className={styles.photo} src={photo} alt="Photo of Nicolas" />
-            <h2>{t("home.aboutMe")}</h2>
-            <p className={styles.whoiam}>
-                {t("home.text1")}
-                <strong>Nico</strong>
-                {t("home.text2")}
-            </p>
-            <div className={styles.contactMe}>
-                <span className={styles.contactText}>
-                    {t("home.contactMe")}
-                    {": "}
-                </span>
-                <div className={styles.contactIconsContainer}>
-                    <SvgContainer>
-                        <a href="mailto:nicomorales.dev@gmail.com">
+            <div className={styles.heroTop}>
+                <div className={styles.heroText}>
+                    <p className={styles.greeting}>{t("home.text1").trim()}</p>
+                    <h1>
+                        Nicolas Morales
+                    </h1>
+                    <p className={styles.role}>{t("home.developer")}</p>
+                    <p className={styles.bio}>
+                        {t("home.text1")}
+                        <strong>Nico</strong>
+                        {t("home.text2")}
+                    </p>
+                    <div className={styles.socialLinks}>
+                        <a
+                            href="mailto:nicomorales.dev@gmail.com"
+                            className={styles.socialLink}
+                            aria-label="Email"
+                        >
                             {gmailIcon}
                         </a>
-                    </SvgContainer>
-                    <SvgContainer>
                         <a
                             href="https://www.linkedin.com/in/nicolas-morales-dev"
                             target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.socialLink}
+                            aria-label="LinkedIn"
                         >
                             {linkedinIcon}
                         </a>
-                    </SvgContainer>
-                    <SvgContainer>
                         <a
                             href="https://github.com/NicoMoralesDev"
                             target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.socialLink}
+                            aria-label="GitHub"
                         >
                             {githubIcon}
                         </a>
-                    </SvgContainer>
+                    </div>
+                </div>
+                <div className={styles.photoContainer}>
+                    <img className={styles.photo} src={photo} alt="Photo of Nicolas Morales" />
+                    <div className={styles.photoGlow}></div>
                 </div>
             </div>
         </div>

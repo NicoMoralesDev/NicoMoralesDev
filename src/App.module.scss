@@ -1,69 +1,77 @@
 @use "styles/variables" as *;
 
 .App {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    min-height: 100vh;
+    transition: background-color $transition-normal, color $transition-normal;
 }
 
 .content {
-    margin: 0rem 0rem;
-    max-width: 1440px;
+    width: 100%;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: 0 2.4rem;
 
     & header,
     section {
-        margin-bottom: 8rem;
-        padding: 1rem;
+        padding-top: $section-gap;
     }
 
     @media only screen and (min-width: $tablet) {
-        margin: 1rem 1rem;
+        padding: 0 4.8rem;
     }
 
     @media only screen and (min-width: $desktop) {
-        margin: 2rem 2rem;
-
-        & header,
-        section {
-            padding: 2rem;
-        }
+        padding: 0 6.4rem;
     }
 }
 
 .dark {
     background-color: $black;
-    color: $white;
+    color: $white-muted;
 
-    & h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    & h1 {
+        color: $white-pure;
+    }
+
+    & h2 {
         color: $primary-orange;
     }
 
+    & h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
+    }
+
     & a {
-        color: $primary-blue;
+        color: $primary-orange;
 
         &:hover {
-            color: $secondary-blue;
+            color: $secondary-orange;
         }
     }
 }
 
 .light {
-    background-color: $white;
-    color: $black;
+    background-color: $white-pure;
+    color: $gray-dark;
 
-    & h1,
-    h2,
-    h3,
+    & h1 {
+        color: $black;
+    }
+
+    & h2 {
+        color: $primary-orange;
+    }
+
+    & h3,
     h4,
     h5,
     h6 {
-        color: $primary-blue;
+        color: $black;
     }
 
     & a {

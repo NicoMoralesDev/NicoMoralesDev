@@ -3,75 +3,73 @@
 .navContainer {
     position: sticky;
     top: 0;
-    z-index: 10;
-
+    z-index: 100;
     width: 100%;
-    min-height: 5vh;
-
-    @media only screen and (min-width: $desktop) {
-        max-width: 1440px;
-    }
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background-color $transition-normal, border-color $transition-normal;
 }
 
 .navBar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    justify-content: space-between;
+    padding: 1.6rem 2.4rem;
+    max-width: $content-max-width;
+    margin: 0 auto;
 
     @media only screen and (min-width: $tablet) {
-        justify-content: space-between;
-        padding: 1rem 2rem;
+        padding: 1.6rem 4.8rem;
+    }
+
+    @media only screen and (min-width: $desktop) {
+        padding: 1.6rem 6.4rem;
     }
 
     & .menuIcon {
         display: flex;
         align-items: center;
-        margin-right: 2rem;
         cursor: pointer;
+        padding: 0.4rem;
+        border-radius: 0.4rem;
+        transition: background-color $transition-fast;
 
         @media only screen and (min-width: $tablet) {
             display: none;
         }
 
         & svg {
-            fill: $primary-blue;
-            width: 4rem;
-            height: 4rem;
+            width: 2.4rem;
+            height: 2.4rem;
         }
     }
 
     .logotipo {
         display: flex;
         align-items: center;
-        // cursor: pointer;
+        gap: 0.8rem;
 
         .isotipo {
-            width: 3rem;
-            height: 3rem;
+            width: 2.8rem;
+            height: 2.8rem;
         }
 
         & .title {
-            font-size: 2rem;
+            font-family: "Fashion Fetish", $font-display;
+            font-size: 1.8rem;
             font-weight: 900;
-        }
-
-        & img {
-            margin-right: 0.5rem;
+            letter-spacing: -0.01em;
         }
     }
 }
 
 .dark {
-    background-color: $black;
-    color: $white;
+    background-color: rgba($black, 0.85);
+    color: $white-muted;
+    border-bottom: 1px solid rgba($primary-orange, 0.1);
 
-    box-shadow: 1px 1px 3px 0px $primary-orange;
-
-    & .menuIcon {
-        & svg {
-            fill: $primary-blue;
-        }
+    & .menuIcon svg {
+        fill: $white-muted;
     }
 
     .logotipo .title {
@@ -80,18 +78,15 @@
 }
 
 .light {
-    background-color: $white;
+    background-color: rgba($white-pure, 0.85);
     color: $black;
+    border-bottom: 1px solid rgba($black, 0.08);
 
-    box-shadow: 1px 1px 3px 0px $primary-blue;
-
-    & .menuIcon {
-        & svg {
-            fill: $primary-orange;
-        }
+    & .menuIcon svg {
+        fill: $black;
     }
 
     .logotipo .title {
-        color: $black;
+        color: $primary-orange;
     }
 }

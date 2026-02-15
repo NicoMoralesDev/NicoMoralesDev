@@ -1,20 +1,27 @@
 @use "../../styles/variables" as *;
 
 .menuItem {
-    padding: 0 0.3rem;
     cursor: pointer;
-    margin-bottom: 1.2rem;
-    font-weight: 700;
+    margin-bottom: 1.6rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     min-width: 3rem;
     height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media only screen and (min-width: $tablet) {
-        display: flex;
-        align-items: center;
-
-        padding: 0 0 0 2rem;
+        padding: 0.6rem 1.2rem;
         margin: 0;
-        line-height: 0;
+        border-radius: 0.6rem;
+        transition: background-color $transition-fast;
+
+        &:hover {
+            background-color: rgba($primary-orange, 0.08);
+        }
     }
 
     & a {
@@ -22,43 +29,43 @@
     }
 
     svg {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
     }
 }
 
 .dark {
     & a {
-        color: #ddd;
+        color: $white-muted;
 
         &:hover {
-            color: $secondary-orange;
+            color: $primary-orange;
         }
     }
 
     svg {
-        fill: #ddd;
+        fill: $white-muted;
 
         &:hover {
-            fill: $secondary-orange;
+            fill: $primary-orange;
         }
     }
 }
 
 .light {
     & a {
-        color: #000;
+        color: $gray-dark;
 
         &:hover {
-            color: #0062ff;
+            color: $primary-orange;
         }
     }
 
     svg {
-        fill: #000;
+        fill: $gray-dark;
 
         &:hover {
-            fill: #0062ff;
+            fill: $primary-orange;
         }
     }
 }

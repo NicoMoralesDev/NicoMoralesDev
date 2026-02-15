@@ -20,15 +20,15 @@ const Skills = () => {
     const { t } = useTranslation();
 
     const svgIcons = [
-        htmlIcon,
-        cssIcon,
-        jsIcon,
-        tsIcon,
-        reactIcon,
-        javaIcon,
-        goLangIcon,
-        sqlIcon,
-        gitIcon,
+        { icon: htmlIcon, name: "HTML" },
+        { icon: cssIcon, name: "CSS" },
+        { icon: jsIcon, name: "JS" },
+        { icon: tsIcon, name: "TS" },
+        { icon: reactIcon, name: "React" },
+        { icon: javaIcon, name: "Java" },
+        { icon: goLangIcon, name: "Go" },
+        { icon: sqlIcon, name: "SQL" },
+        { icon: gitIcon, name: "Git" },
     ];
 
     return (
@@ -36,58 +36,63 @@ const Skills = () => {
             <h2>{t("skills.heading")}</h2>
             <div className={`${styles.skillsIcons} ${themeStyle}`}>
                 {svgIcons.map((item, id) => {
-                    return <div key={id}>{item}</div>;
+                    return (
+                        <div key={id} className={styles.iconItem}>
+                            {item.icon}
+                            <span className={styles.iconLabel}>{item.name}</span>
+                        </div>
+                    );
                 })}
             </div>
             <div className={`${styles.skillsContent} ${themeStyle}`}>
-                <div>
+                <div className={styles.skillCard}>
                     <h3>{t("skills.front-end")}</h3>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SASS</li>
-                        <li>JavaScript</li>
-                        <li>{t("skills.learning")} TypeScript</li>
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>Tailwind</li>
+                        <li><span className={styles.skillTag}>HTML</span></li>
+                        <li><span className={styles.skillTag}>CSS</span></li>
+                        <li><span className={styles.skillTag}>SASS</span></li>
+                        <li><span className={styles.skillTag}>JavaScript</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>TypeScript</span></li>
+                        <li><span className={styles.skillTag}>React</span></li>
+                        <li><span className={styles.skillTag}>Next.js</span></li>
+                        <li><span className={styles.skillTag}>Tailwind</span></li>
                     </ul>
                 </div>
-                <div>
+                <div className={styles.skillCard}>
                     <h3>{t("skills.back-end")}</h3>
                     <ul>
-                        <li>Java</li>
-                        <li>Spring Boot</li>
-                        <li>{t("skills.learning")} GoLang</li>
+                        <li><span className={styles.skillTag}>Java</span></li>
+                        <li><span className={styles.skillTag}>Spring Boot</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>GoLang</span></li>
                     </ul>
                 </div>
-                <div>
+                <div className={styles.skillCard}>
                     <h3>{t("skills.mobile")}</h3>
                     <ul>
-                        <li>{t("skills.learning")} Flutter</li>
-                        <li>{t("skills.learning")} React Native</li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>Flutter</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>React Native</span></li>
                     </ul>
                 </div>
-                <div>
+                <div className={styles.skillCard}>
                     <h3>{t("skills.databases")}</h3>
                     <ul>
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>ElasticSearch</li>
-                        <li>{t("skills.learning")} GraphQL</li>
-                        <li>{t("skills.learning")} DynamoDB</li>
-                        <li>{t("skills.learning")} Redis</li>
+                        <li><span className={styles.skillTag}>MySQL</span></li>
+                        <li><span className={styles.skillTag}>PostgreSQL</span></li>
+                        <li><span className={styles.skillTag}>MongoDB</span></li>
+                        <li><span className={styles.skillTag}>ElasticSearch</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>GraphQL</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>DynamoDB</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>Redis</span></li>
                     </ul>
                 </div>
-                <div>
+                <div className={styles.skillCard}>
                     <h3>{t("skills.others")}</h3>
                     <ul>
-                        <li>Git</li>
-                        <li>{t("skills.agile")}</li>
-                        <li>{t("skills.continuous-integration")}</li>
-                        <li>{t("skills.learning")} Docker</li>
-                        <li>{t("skills.learning")} AWS</li>
+                        <li><span className={styles.skillTag}>Git</span></li>
+                        <li><span className={styles.skillTag}>{t("skills.agile")}</span></li>
+                        <li><span className={styles.skillTag}>{t("skills.continuous-integration")}</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>Docker</span></li>
+                        <li><span className={`${styles.skillTag} ${styles.learning}`}>AWS</span></li>
                     </ul>
                 </div>
             </div>

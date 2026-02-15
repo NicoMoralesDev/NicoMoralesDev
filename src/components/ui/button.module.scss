@@ -1,30 +1,32 @@
 @use "../../styles/variables" as *;
 
 button {
-    width: 15rem;
-    height: 5rem;
+    padding: 1rem 2.4rem;
     cursor: pointer;
-
-    border: 0 solid $black;
-    border-radius: 10rem;
-
-    font-size: 2rem;
-    font-weight: bold;
-    color: $black;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all $transition-fast;
 }
 
 .dark {
-    background-color: $primary-blue;
+    background-color: $primary-orange;
+    color: $white-pure;
 
     &:hover {
-        background-color: $secondary-blue;
+        background-color: $secondary-orange;
+        transform: translateY(-1px);
     }
 }
 
 .light {
     background-color: $primary-orange;
+    color: $white-pure;
 
     &:hover {
         background-color: $secondary-orange;
+        transform: translateY(-1px);
     }
 }

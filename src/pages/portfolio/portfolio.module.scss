@@ -3,8 +3,8 @@
 .portfolioContent {
     ul {
         display: grid;
-        grid-template-columns: repeat(1, auto);
-        grid-gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
 
         @media only screen and (min-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -16,36 +16,53 @@
     }
 
     li {
-        padding: 2rem;
+        padding: 2.4rem;
+        border-radius: 1.2rem;
+        transition: transform $transition-fast, box-shadow $transition-fast;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
     }
 
     .logotipo {
         display: flex;
         align-items: center;
+        gap: 1rem;
 
         .isotipo {
-            width: 3rem;
+            width: 3.2rem;
         }
 
         & .title {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 900;
-        }
-
-        & img {
-            margin-right: 1rem;
+            font-family: "Fashion Fetish", $font-display;
         }
     }
 }
 
 .dark {
     li {
-        box-shadow: -1px -1px 3px 0px $primary-orange;
+        background-color: $black-card;
+        border: 1px solid rgba($primary-orange, 0.12);
+
+        &:hover {
+            box-shadow: 0 8px 32px rgba($primary-orange, 0.12);
+            border-color: rgba($primary-orange, 0.3);
+        }
     }
 }
 
 .light {
     li {
-        box-shadow: -1px -1px 3px 0px $primary-blue;
+        background-color: $white-pure;
+        border: 1px solid rgba($black, 0.08);
+        box-shadow: 0 1px 3px rgba($black, 0.04);
+
+        &:hover {
+            box-shadow: 0 8px 32px rgba($primary-orange, 0.1);
+            border-color: rgba($primary-orange, 0.2);
+        }
     }
 }

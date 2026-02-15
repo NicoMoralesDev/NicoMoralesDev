@@ -1,23 +1,36 @@
 // COLOR VARIABLES
-$black: #000;
-$white: #ddd;
+$black: #0a0a0a;
+$black-light: #141414;
+$black-card: #1a1a1a;
+$gray-dark: #333;
+$gray-mid: #666;
+$gray-light: #999;
+$white: #f5f5f5;
+$white-pure: #fff;
+$white-muted: #e0e0e0;
+
 $primary-orange: #ff4d00;
 $secondary-orange: #cc3e00;
+$orange-glow: rgba(255, 77, 0, 0.15);
+$orange-subtle: rgba(255, 77, 0, 0.08);
+
 $primary-blue: #0062ff;
 $secondary-blue: #008ecc;
 
 // RESPONSIVE BREAKPOINTS
-$tablet: 48em; // 768px;
-$desktop: 90em; // 1440px
-
-// $bp-desktop-max: 100em; // 1600px
-// $bp-desktop-big: 90em; // 1440px
-// $bp-desktop-wide: 75em; // 1200px
-// $bp-desktop-small: 62em; // 992px
-// $bp-tablet: 48em; // 768px;
-// $bp-mobile: 30em; // 480px;
-// $bp-mobile-min: 20em; // 320px;
+$tablet: 48em; // 768px
+$desktop: 75em; // 1200px
+$desktop-lg: 90em; // 1440px
 
 // FONT VARIABLES
-$font-primary: "Fashion Fetish";
+$font-primary: "Roboto", Geneva, Verdana, sans-serif;
 $font-display: Geneva, Verdana, sans-serif;
+
+// SPACING
+$section-gap: 10rem;
+$content-max-width: 1200px;
+
+// TRANSITIONS
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
